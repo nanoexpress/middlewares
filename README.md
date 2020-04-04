@@ -4,29 +4,9 @@ List of middlewares for nanoexpress
 
 ## List
 
-- body-parser
+For more info, go-to middleware documentation by click to link
 
-## Example
-
-See to `/examples` directory for each middleware
-
-## Usage
-
-### ESM Module
-
-```js
-import bodyParser from 'nanoexpress/middlewares/body-parser';
-
-app.use(bodyParser());
-```
-
-### CJS Module
-
-```js
-const bodyParser = require('nanoexpress/middlewares/body-parser/cjs');
-
-app.use(bodyParser());
-```
+- [body-parser](./body-parser)
 
 ## License
 
