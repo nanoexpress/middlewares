@@ -8,7 +8,7 @@
     "url": "https://www.patreon.com/dalisoft"
   },
   "scripts": {
-    "lint": "eslint ./**",
+    "lint": "prettier **/*.js && eslint ./**",
     "cleanup-cjs": "rm -rf **/cjs/*.cjs.js && rm -rf **/cjs/*.cjs.js.map",
     "build": "npm run cleanup-cjs && rollup -c",
     "prepublishOnly": "npm run lint"
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "devDependencies": {
     "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
     "prettier": "^2.0.1",

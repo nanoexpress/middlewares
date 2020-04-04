@@ -12,9 +12,9 @@ import { parse } from 'querystring';
  * @param {Boolean=} options.urlEncoded Parse JSON data with content-type of
  * `x-www-form-urlencoded` into JS Object?
  *
- * @default options.json true
- * @default options.experimentalJsonParse false
- * @default options.urlEncoded true
+ * @default options.json true `JSON-parsing enabled by default`
+ * @default options.experimentalJsonParse false `Experimental JSON-parsing disabled by default`
+ * @default options.urlEncoded true `Form Data-parsing enabled by default`
  *
  * @example
  * app.use(bodyParser())
