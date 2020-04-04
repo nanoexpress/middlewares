@@ -6,32 +6,6 @@
   "main": "body-parser.es.js",
   "module": "body-parser.es.js",
   "typings": "body-parser.d.ts",
-  "funding": {
-    "type": "patreon",
-    "url": "https://www.patreon.com/dalisoft"
-  },
-  "scripts": {
-    "lint": "eslint ./src",
-    "prepublishOnly": "npm run lint && npm run build",
-    "build": "rm -rf cjs/*.js && rm -rf cjs/*.map && rm -rf cjs/packed && rollup -c"
-  },
-  "engines": {
-    "node": ">=12.16"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nanoexpress/middlewares.git"
-  },
-  "keywords": [
-    "nanoexpress",
-    "body-parser"
-  ],
-  "author": "dalisoft",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nanoexpress/middlewares/issues"
-  },
-  "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "devDependencies": {
     "rollup": "^2.0.6"
   }
