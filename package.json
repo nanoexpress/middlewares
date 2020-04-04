@@ -1,0 +1,43 @@
+{
+  "name": "@nanoexpress/middlewares",
+  "version": "0.0.1",
+  "description": "Middlewares package for nanoexpress",
+  "type": "module",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/dalisoft"
+  },
+  "scripts": {
+    "lint": "eslint ./**",
+    "cleanup-cjs": "rm -rf **/cjs/*.cjs.js && rm -rf **/cjs/*.cjs.js.map",
+    "build": "npm run cleanup-cjs && rollup -c",
+    "prepublishOnly": "npm run lint"
+  },
+  "engines": {
+    "node": ">=12.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoexpress/middlewares.git"
+  },
+  "keywords": [
+    "nanoexpress",
+    "middlewares"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanoexpress/middlewares/issues"
+  },
+  "homepage": "https://github.com/nanoexpress/middlewares#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.0.1",
+    "rollup": "^2.3.2"
+  },
+  "dependencies": {
+    "@nanoexpress/pro-slim": "github:nanoexpress/pro-slim"
+  }
+}
