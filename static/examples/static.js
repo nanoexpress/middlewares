@@ -5,11 +5,8 @@ import path from 'path';
 const app = nanoexpress();
 
 (async () => {
-  // Catch erro
-  app.use(async (req, res) => {
-    res.onAborted(() => {});
-  });
-  // Simple implementation for middleware to work
+  // Simple implementation for `headers` middleware to work
+  // effectively with browsers `Ranges` header
   app.use(async (req) => {
     req.headers = {};
     req.forEach((key, value) => {
