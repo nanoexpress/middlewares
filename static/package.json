@@ -1,0 +1,12 @@
+{
+  "name": "@nanoexpress/middleware-static-serve",
+  "version": "0.0.1",
+  "description": "Static file serve middleware for nanoexpress",
+  "type": "module",
+  "main": "static.es.js",
+  "module": "static.es.js",
+  "typings": "static.d.ts",
+  "devDependencies": {
+    "rollup": "^2.0.6"
+  }
+}
