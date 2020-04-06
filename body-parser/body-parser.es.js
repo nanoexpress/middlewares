@@ -40,11 +40,7 @@ export default function bodyParser({
           urlEncoded &&
           contentType.indexOf('/x-www-form-urlencoded') !== -1
         ) {
-          if (typeof urlEncoded === 'object') {
-            req.body = parse(body, urlEncoded);
-          } else {
-            req.body = parse(body);
-          }
+          req.body = parse(body, urlEncoded);
         }
       }
     }

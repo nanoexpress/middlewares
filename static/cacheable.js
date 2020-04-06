@@ -1,5 +1,4 @@
 import precacheStatic from './utils/precache-folder.js';
-import { resAbortHandler } from '@nanoexpress/pro-slim/src/constants.js';
 
 export default async function staticMiddleware(
   path,
@@ -19,13 +18,6 @@ export default async function staticMiddleware(
   const items = await precacheStatic(path);
 
   return async function handleServe(req, res) {
-    if (!res[resAbortHandler]) {
-      res.onAborted(() => {
-        res.aborted = true;
-      });
-      res[resAbortHandler] = true;
-    }
-
     let fileName = req.path;
 
     if (forcePretty || (addPrettyUrl && fileName === '/')) {
