@@ -34,9 +34,9 @@
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.1",
-    "lint-staged": "^10.0.7",
+    "lint-staged": "^10.1.2",
     "prettier": "^2.0.1",
-    "rollup": "^2.3.2"
+    "rollup": "^2.3.3"
   },
   "dependencies": {
     "@nanoexpress/pro-slim": "github:nanoexpress/pro-slim"
