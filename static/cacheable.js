@@ -36,9 +36,8 @@ export default async function staticMiddleware(
       if (resolved.endsWith(fileName)) {
         if (streamable) {
           return res.sendFile(resolved, lastModified, compressed);
-        } else {
-          return res.end(raw);
         }
+        return res.end(raw);
       }
     }
   };
