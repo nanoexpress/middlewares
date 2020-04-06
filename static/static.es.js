@@ -34,9 +34,19 @@ import { default as live } from './live.js';
  * app.use(staticServe('./assets/static'))
  */
 export default function staticServe(path, config = {}) {
-  if (config.mode === undefined) {
-    config.mode = 'cached'; // Has better Response/sec
-  }
+  config = Object.assign(
+    {},
+    {
+      mode: 'cached',
+      index: 'index.html',
+      forcePretty: false,
+      addPrettyUrl: true,
+      lastModified: true,
+      compressed: true
+    },
+    config
+  );
+
   if (config.mode === 'live') {
     return live(path, config);
   } else if (config.mode === 'cached') {

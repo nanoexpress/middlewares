@@ -1,16 +1,7 @@
 import { promises as fs } from 'fs';
 import { resAbortHandler } from '@nanoexpress/pro-slim/src/constants.js';
 
-export default function staticMiddleware(
-  path,
-  {
-    index = 'index.html',
-    forcePretty = false,
-    addPrettyUrl = true,
-    lastModified = true,
-    compressed = true
-  } = {}
-) {
+export default function staticMiddleware(path, config) {
   return async function handleServe(req, res) {
     if (!res[resAbortHandler]) {
       res.onAborted(() => {
@@ -21,8 +12,8 @@ export default function staticMiddleware(
 
     let url = req.path;
 
-    if (forcePretty || (addPrettyUrl && url === '/')) {
-      url += index;
+    if (config.forcePretty || (config.addPrettyUrl && url === '/')) {
+      url += config.index;
     }
 
     const filePath = path + url;
@@ -30,7 +21,7 @@ export default function staticMiddleware(
     const stat = await fs.stat(filePath).catch(() => null);
 
     if (stat && !res.aborted) {
-      return res.sendFile(filePath, lastModified, compressed);
+      return res.sendFile(filePath, config.lastModified, config.compressed);
     }
   };
 }

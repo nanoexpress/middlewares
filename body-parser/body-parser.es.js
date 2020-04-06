@@ -19,28 +19,24 @@ import { parse } from 'querystring';
  * @example
  * app.use(bodyParser())
  */
-export default function bodyParser({
-  json = true,
-  experimentalJsonParse = false,
-  urlEncoded = true
-} = {}) {
+export default function bodyParser(config = {}) {
   return async function bodyParseHandler(req) {
     const { headers, body } = req;
 
     if (headers && body) {
       const contentType = headers['content-type'];
       if (contentType) {
-        if (json && contentType.indexOf('/json') !== -1) {
-          if (experimentalJsonParse && req.fastBodyParse !== undefined) {
+        if (config.json !== false && contentType.indexOf('/json') !== -1) {
+          if (config.experimentalJsonParse && req.fastBodyParse !== undefined) {
             req.body = req.fastBodyParse(body);
           } else {
             req.body = JSON.parse(body);
           }
         } else if (
-          urlEncoded &&
+          config.urlEncoded !== false &&
           contentType.indexOf('/x-www-form-urlencoded') !== -1
         ) {
-          req.body = parse(body, urlEncoded);
+          req.body = parse(body);
         }
       }
     }
