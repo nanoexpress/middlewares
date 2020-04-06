@@ -62,7 +62,6 @@ typings/
 .next
 
 # build files
-build
 **/cjs/*
 tmp
 dist
