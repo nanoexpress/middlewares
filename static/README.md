@@ -10,7 +10,7 @@ If you using middleware for `nanoexpress`, performance will be faster due of thi
 
 ## Example
 
-See to [examples](https://github.com/nanoexpress/middlewares/tree/master/static/examples) directory
+See to [examples](./examples) directory
 
 ## Usage
 
@@ -39,7 +39,7 @@ app.use(staticServe('./static'));
 
 All of options are optional
 
-- `options.mode` [default=cached] - Serve mode, has two values - Cached and Live. Cached gives better performance, but on refresh gives cached result and uses more performance. Live mode uses less memory usage, on request responses last version but on high-load applicatins may reduces performance
+- `options.mode` [default=cached] - Serve mode, has two values - Cached and Live. Cached gives better performance, but on refresh gives cached result and uses more RAM. Live mode uses less memory usage, on request responses last version but on high-load applicatins may reduces performance
 - `options.index` [default=index.html] - Index filename
 - `options.forcePretty` [default=false] - Force appending index-file path even path isn't as root
 - `options.addPrettyUrl` [default=true] - Enable pretty url by auto-appending index-file, so works `/` like `/index.html`

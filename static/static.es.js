@@ -7,7 +7,7 @@ import { default as live } from './live.js';
  * @param {object} options Options of serve
  * @param {String=} options.mode Serve mode, has two values - Cached and Live.
  * Cached gives better performance, but on refresh gives cached result
- * and uses more performance.
+ * and uses more RAM.
  * Live mode uses less memory usage, on request responses last version
  * but on high-load applicatins may reduces performance
  *

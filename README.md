@@ -6,8 +6,8 @@ List of middlewares for nanoexpress
 
 For more info, go-to middleware documentation by click to link
 
-- [body-parser](https://github.com/nanoexpress/middlewares/tree/master/body-parser)
-- [static](https://github.com/nanoexpress/middlewares/tree/master/static)
+- [body-parser](./body-parser)
+- [static](./static)
 
 ## License
 

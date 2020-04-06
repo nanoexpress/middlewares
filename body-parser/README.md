@@ -10,7 +10,7 @@ If you using middleware for `nanoexpress`, performance will be faster due of thi
 
 ## Example
 
-See to [examples](https://github.com/nanoexpress/middlewares/tree/master/body-parser/examples) directory
+See to [examples](./examples) directory
 
 ## Usage
 
