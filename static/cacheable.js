@@ -23,5 +23,7 @@ export default async function staticMiddleware(path, config) {
         return res.end(raw);
       }
     }
+
+    return undefined;
   };
 }
