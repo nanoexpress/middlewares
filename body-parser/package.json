@@ -5,8 +5,5 @@
   "type": "module",
   "main": "body-parser.es.js",
   "module": "body-parser.es.js",
-  "typings": "body-parser.d.ts",
-  "devDependencies": {
-    "rollup": "^2.0.6"
-  }
+  "typings": "body-parser.d.ts"
 }

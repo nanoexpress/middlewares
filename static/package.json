@@ -5,8 +5,5 @@
   "type": "module",
   "main": "static.es.js",
   "module": "static.es.js",
-  "typings": "static.d.ts",
-  "devDependencies": {
-    "rollup": "^2.0.6"
-  }
+  "typings": "static.d.ts"
 }
