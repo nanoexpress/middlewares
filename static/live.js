@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs';
+import { resAbortHandler } from '@nanoexpress/pro-slim/src/constants.js';
 
 export default function staticMiddleware(
   path,
@@ -11,6 +12,13 @@ export default function staticMiddleware(
   } = {}
 ) {
   return async function handleServe(req, res) {
+    if (!res[resAbortHandler]) {
+      res.onAborted(() => {
+        res.aborted = true;
+      });
+      res[resAbortHandler] = true;
+    }
+
     let url = req.path;
 
     if (forcePretty || (addPrettyUrl && url === '/')) {
@@ -21,7 +29,7 @@ export default function staticMiddleware(
 
     const stat = await fs.stat(filePath).catch(() => null);
 
-    if (stat) {
+    if (stat && !res.aborted) {
       return res.sendFile(filePath, lastModified, compressed);
     }
   };
