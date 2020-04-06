@@ -8,7 +8,9 @@
     "url": "https://www.patreon.com/dalisoft"
   },
   "scripts": {
-    "lint": "prettier **/*.js && eslint ./**",
+    "lint:prettier": "prettier static/*.js && prettier body-parser/*.js",
+    "lint:eslint": "eslint static/*.js && eslint body-parser/*.js",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
     "cleanup-cjs": "rm -rf **/cjs/*.cjs.js && rm -rf **/cjs/*.cjs.js.map",
     "build": "npm run cleanup-cjs && rollup -c",
     "prepublishOnly": "npm run lint"
