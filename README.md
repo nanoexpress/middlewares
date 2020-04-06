@@ -22,7 +22,7 @@ List of middlewares for nanoexpress
 This library compatible with
 
 - [nanoexpress/pro](https://github.com/nanoexpress/pro)
-- [nanoexpress/middlewares](https://github.com/nanoexpress/middlewares)
+- [nanoexpress/pro-slim](https://github.com/nanoexpress/pro-slim)
 
 ## List
 
