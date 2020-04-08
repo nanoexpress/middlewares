@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
 import { join } from 'path';
-import { getMime } from '@nanoexpress/pro-slim/src/helpers/mime.js';
+import { getMime } from './mime.js';
 
 async function handleDirectory(path) {
   if ((await fs.stat(path)).isDirectory()) {

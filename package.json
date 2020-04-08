@@ -39,7 +39,5 @@
     "prettier": "^2.0.4",
     "rollup": "^2.3.3"
   },
-  "dependencies": {
-    "@nanoexpress/pro-slim": "github:nanoexpress/pro-slim"
-  }
+  "dependencies": {}
 }

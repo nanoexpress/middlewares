@@ -1,14 +1,3 @@
-import {
-  HttpRequest as HttpRequestBasic,
-  HttpResponse as HttpResponseBasic
-} from 'uWebSockets.js';
-import { HttpResponse } from '@nanoexpress/pro-slim';
-
-type Middleware = (
-  req: HttpRequestBasic,
-  res: HttpResponse | HttpResponseBasic
-) => HttpResponse;
-
 interface StaticServeOptions {
   mode: 'cached' | 'live';
   index: string;
@@ -18,9 +7,9 @@ interface StaticServeOptions {
   compressed: boolean;
 }
 
-declare function staticServe(
+declare function staticServe<T>(
   path: string,
   options?: StaticServeOptions
-): Middleware | Promise<Middleware>;
+): T | Promise<T>;
 
 export = staticServe;

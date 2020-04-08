@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs';
-import { resAbortHandler } from '@nanoexpress/pro-slim/src/constants.js';
 
+export const resAbortHandler = '___$HttpResponseAbortHandler';
 export default function staticMiddleware(path, config) {
   return async function handleServe(req, res) {
     if (!res[resAbortHandler]) {

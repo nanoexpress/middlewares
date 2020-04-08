@@ -1,4 +1,4 @@
-import nanoexpress from '@nanoexpress/pro-slim';
+import nanoexpress from '@nanoexpress/pro-slim'; // Or your choice, you can use PRO version itself
 import staticServe from '../static.es.js';
 import path from 'path';
 
