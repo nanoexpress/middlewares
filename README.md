@@ -7,7 +7,15 @@
 
 List of middlewares for nanoexpress
 
-> Soon (1-2 month) all packed built-in `middlewares` will be moved here
+## Note
+
+Only 3 middleware was left to moving here
+
+1. `passport` - Polyfill and fully-functional passportjs middleware
+2. `swagger-ui` - Swagger UI for Swagger documentation
+3. `file-upload` - File-upload middleware
+
+Due of a lot tasks on my full-time job, i cannot these currently, but i will add these when i will get time
 
 ## Features
 
