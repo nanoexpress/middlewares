@@ -10,7 +10,7 @@ If you using middleware for `nanoexpress`, performance will be faster due of thi
 
 ## Example
 
-See to [examples](./examples) directory
+See the [examples](./examples) directory
 
 ## Usage
 

@@ -1,6 +1,6 @@
 {
   "name": "@nanoexpress/middlewares",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Middleware packages for nanoexpress",
   "type": "module",
   "funding": {
@@ -39,5 +39,11 @@
     "prettier": "^2.0.4",
     "rollup": "^2.3.3"
   },
-  "dependencies": {}
+  "peerDependencies": {
+    "graphql": "^15.0.0"
+  },
+  "dependencies": {
+    "@nanoexpress/pro-slim": "github:nanoexpress/pro-slim",
+    "graphql": "^15.0.0"
+  }
 }

@@ -1,6 +1,6 @@
 const external = ['querystring'];
 
-export default ['body-parser', 'static'].map((name) => ({
+export default ['body-parser', 'static', 'graphql'].map((name) => ({
   input: `./${name}/${name}.es.js`,
   output: {
     format: 'cjs',
