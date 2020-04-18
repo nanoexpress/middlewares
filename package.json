@@ -41,9 +41,5 @@
   },
   "peerDependencies": {
     "graphql": "^15.0.0"
-  },
-  "dependencies": {
-    "@nanoexpress/pro-slim": "github:nanoexpress/pro-slim",
-    "graphql": "^15.0.0"
   }
 }
