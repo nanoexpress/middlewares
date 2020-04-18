@@ -31,6 +31,7 @@ For more info, go-to middleware documentation by click to link
 - [body-parser](./body-parser)
 - [static](./static)
 - [graphql](./graphql)
+- [redoc](./redoc)
 
 ## License
 
