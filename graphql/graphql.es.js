@@ -19,9 +19,9 @@ export default function graphql(schema, root) {
       const contentType = headers['content-type'];
       res.writeHeader('content-type', 'application/json');
 
-      let graphqlQuery;
-      let variables;
-      let operationName;
+      let graphqlQuery = '';
+      let variables = undefined;
+      let operationName = undefined;
 
       if (typeof body === 'object' && body) {
         graphqlQuery = body.query || body.mutation;
