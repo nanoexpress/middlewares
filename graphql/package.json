@@ -1,0 +1,9 @@
+{
+  "name": "@nanoexpress/middleware-graphql",
+  "version": "0.0.1",
+  "description": "GraphQL middleware for nanoexpress",
+  "type": "module",
+  "main": "graphql.es.js",
+  "module": "graphql.es.js",
+  "typings": "graphql.d.ts"
+}
