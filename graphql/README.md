@@ -22,7 +22,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import graphql from 'nanoexpress/middlewares/graphql';
+import graphql from '@nanoexpress/middlewares/graphql';
 
 app.use('/graphql', graphql(GraphQLSchema));
 ```
@@ -30,7 +30,7 @@ app.use('/graphql', graphql(GraphQLSchema));
 ### CJS Module
 
 ```js
-const graphql = require('nanoexpress/middlewares/graphql/cjs');
+const graphql = require('@nanoexpress/middlewares/graphql/cjs');
 
 app.use('/graphql', graphql(GraphQLSchema));
 ```

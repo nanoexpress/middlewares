@@ -17,7 +17,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import staticServe from 'nanoexpress/middlewares/static';
+import staticServe from '@nanoexpress/middlewares/static';
 
 app.use(staticServe('./static'));
 ```
@@ -25,7 +25,7 @@ app.use(staticServe('./static'));
 ### CJS Module
 
 ```js
-const staticServe = require('nanoexpress/middlewares/static/cjs');
+const staticServe = require('@nanoexpress/middlewares/static/cjs');
 
 app.use(staticServe('./static'));
 ```

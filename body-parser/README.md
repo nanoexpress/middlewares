@@ -17,7 +17,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import bodyParser from 'nanoexpress/middlewares/body-parser';
+import bodyParser from '@nanoexpress/middlewares/body-parser';
 
 app.use(bodyParser());
 ```
@@ -25,7 +25,7 @@ app.use(bodyParser());
 ### CJS Module
 
 ```js
-const bodyParser = require('nanoexpress/middlewares/body-parser/cjs');
+const bodyParser = require('@nanoexpress/middlewares/body-parser/cjs');
 
 app.use(bodyParser());
 ```

@@ -13,7 +13,7 @@ See [here](https://github.com/Redocly/redoc/) for more info
 ### ESM Module
 
 ```js
-import reDoc from 'nanoexpress/middlewares/redoc';
+import reDoc from '@nanoexpress/middlewares/redoc';
 
 app.define(swagger); // For nanoexpress-pro this line doesn't need
 app.use(reDoc());
@@ -22,7 +22,7 @@ app.use(reDoc());
 ### CJS Module
 
 ```js
-const reDoc = require('nanoexpress/middlewares/redoc/cjs');
+const reDoc = require('@nanoexpress/middlewares/redoc/cjs');
 
 app.define(swagger); // For nanoexpress-pro this line doesn't need
 app.use(reDoc());
