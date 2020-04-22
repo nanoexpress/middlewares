@@ -21,6 +21,8 @@ app.use(reDoc());
 
 ### CJS Module
 
+> For installing CJS variant, try `npm i nanoexpress/middlewares#builds` as always there will be CJS builds
+
 ```js
 const reDoc = require('@nanoexpress/middlewares/redoc/cjs');
 

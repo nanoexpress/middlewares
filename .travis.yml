@@ -9,8 +9,6 @@ install:
   - npm install
 script:
   - npm run lint
-  - git config user.email dalisoft@mail.ru
-  - git config user.name dalisoft
   - git clone --recursive https://github.com/nanoexpress/middlewares.git
   - cd middlewares
   - npm install
