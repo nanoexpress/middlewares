@@ -5,7 +5,6 @@ export default ['body-parser', 'static', 'graphql'].map((name) => ({
   output: {
     format: 'cjs',
     file: `./${name}/cjs/${name}.cjs.js`,
-    sourcemap: false,
     strict: false
   },
   external
