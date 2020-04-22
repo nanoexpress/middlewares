@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint:prettier": "prettier static/*.js && prettier body-parser/*.js && prettier graphql/*.js && prettier redoc/*.js",
-    "lint:eslint": "eslint static/*.js && eslint body-parser/*.js && eslint graphql*.js && eslint redoc/*.js",
+    "lint:eslint": "eslint static/*.js && eslint body-parser/*.js && eslint graphql/*.js && eslint redoc/*.js",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "cleanup-cjs": "rm -rf **/cjs/*.cjs.js && rm -rf **/cjs/*.cjs.js.map",
     "build": "npm run cleanup-cjs && rollup -c",
