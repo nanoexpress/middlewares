@@ -9,16 +9,5 @@ install:
   - npm install
 script:
   - npm run lint
-  - git clone --recursive https://github.com/nanoexpress/middlewares.git
-  - cd middlewares
-  - npm install
-  - npm run build
-  - git checkout builds
-  - git status
-  - git pull origin builds
-  - git commit -a -m "CommonJS last build" --allow-empty
-  - git config user.email dalisoft@mail.ru
-  - git config user.name dalisoft
-  - git push "https://dalisoft:$TOKEN@github.com/nanoexpress/middlewares" builds
 #  - npm test
 #  - npm run coveralls

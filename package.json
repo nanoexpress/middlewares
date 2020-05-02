@@ -10,9 +10,6 @@
   "scripts": {
     "lint:prettier": "prettier static/*.js && prettier body-parser/*.js && prettier graphql/*.js && prettier redoc/*.js",
     "lint:eslint": "eslint static/*.js && eslint body-parser/*.js && eslint graphql/*.js && eslint redoc/*.js",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
-    "cleanup-cjs": "rm -rf **/cjs/*.cjs.js && rm -rf **/cjs/*.cjs.js.map",
-    "build": "npm run cleanup-cjs && rollup -c",
     "prepublishOnly": "npm run lint"
   },
   "engines": {
@@ -36,8 +33,7 @@
     "eslint": "^6.8.0",
     "husky": "^4.2.1",
     "lint-staged": "^10.1.2",
-    "prettier": "^2.0.4",
-    "rollup": "^2.3.3"
+    "prettier": "^2.0.4"
   },
   "peerDependencies": {
     "graphql": "^15.0.0"
