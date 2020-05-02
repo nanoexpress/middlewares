@@ -24,7 +24,7 @@ app.use(staticServe('./static'));
 
 ### CJS Module
 
-> For installing CJS variant, try `npm i nanoexpress/middlewares#builds` as always there will be CJS builds
+> For installing CJS variant, try `npm i nanoexpress/middlewares#cjs` as always there will be CJS builds
 
 ```js
 const staticServe = require('@nanoexpress/middlewares/static/cjs');

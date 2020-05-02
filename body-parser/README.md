@@ -24,7 +24,7 @@ app.use(bodyParser());
 
 ### CJS Module
 
-> For installing CJS variant, try `npm i nanoexpress/middlewares#builds` as always there will be CJS builds
+> For installing CJS variant, try `npm i nanoexpress/middlewares#cjs` as always there will be CJS builds
 
 ```js
 const bodyParser = require('@nanoexpress/middlewares/body-parser/cjs');
