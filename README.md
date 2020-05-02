@@ -1,9 +1,9 @@
 # Middlewares
 
-[![Travis](https://img.shields.io/travis/nanoexpress/middlewares.svg)](http://github.com/nanoexpress/middlewares)
+[![Travis](https://img.shields.io/travis/nanoexpress/middlewares.svg)](https://github.com/nanoexpress/middlewares)
 [![Code Climate](https://codeclimate.com/github/nanoexpress/middlewares/badges/gpa.svg)](https://codeclimate.com/github/nanoexpress/middlewares)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nanoexpress/middlewares/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nanoexpress/middlewares/?branch=master)
-[![GitHub issues](https://img.shields.io/github/issues/nanoexpress/middlewares.svg)](http://github.com/nanoexpress/middlewares/issues)
+[![GitHub issues](https://img.shields.io/github/issues/nanoexpress/middlewares.svg)](https://github.com/nanoexpress/middlewares/issues)
 
 List of middlewares for nanoexpress
 
