@@ -17,6 +17,8 @@ script:
   - git status
   - git pull origin builds
   - git commit -a -m "CommonJS last build" --allow-empty
+  - git config user.email dalisoft@mail.ru
+  - git config user.name dalisoft
   - git push "https://dalisoft:$TOKEN@github.com/nanoexpress/middlewares" builds
 #  - npm test
 #  - npm run coveralls
