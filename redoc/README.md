@@ -15,6 +15,8 @@ app.define(swagger); // For nanoexpress-pro this line doesn't need
 app.use(reDoc());
 ```
 
+### CJS Module
+
 ```js
 const reDoc = require('@nanoexpress/middlewares/redoc/cjs');
 

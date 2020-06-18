@@ -18,6 +18,8 @@ import bodyParser from '@nanoexpress/middlewares/body-parser';
 app.use(bodyParser());
 ```
 
+### CJS Module
+
 ```js
 const bodyParser = require('@nanoexpress/middlewares/body-parser/cjs');
 

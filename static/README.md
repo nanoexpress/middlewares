@@ -18,6 +18,8 @@ import staticServe from '@nanoexpress/middlewares/static';
 app.use(staticServe('./static'));
 ```
 
+### CJS Module
+
 ```js
 const staticServe = require('@nanoexpress/middlewares/static/cjs');
 

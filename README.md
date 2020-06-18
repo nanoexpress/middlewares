@@ -21,8 +21,6 @@ Due of a lot tasks on my full-time job, i cannot add these currently or with-in 
 
 ## Installation
 
-> For installing CJS variant, try `npm i nanoexpress/middlewares#cjs` as always there will be CJS builds
-
 ```bash
 npm i nanoexpress/middlewares
 # or

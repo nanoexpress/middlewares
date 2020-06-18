@@ -23,6 +23,8 @@ import graphql from '@nanoexpress/middlewares/graphql';
 app.use('/graphql', graphql(GraphQLSchema));
 ```
 
+### CJS Module
+
 ```js
 const graphql = require('@nanoexpress/middlewares/graphql/cjs');
 
