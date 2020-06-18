@@ -1,6 +1,6 @@
 {
   "name": "@nanoexpress/middlewares",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Middleware packages for nanoexpress",
   "type": "module",
   "funding": {
@@ -11,6 +11,9 @@
     "lint:prettier": "prettier static/*.js && prettier body-parser/*.js && prettier graphql/*.js && prettier redoc/*.js",
     "lint:eslint": "eslint static/*.js && eslint body-parser/*.js && eslint graphql/*.js && eslint redoc/*.js",
     "lint": "npm run lint:prettier && npm run lint:eslint",
+    "cleanup-cjs": "rm -rf **/cjs/*.cjs.js && rm -rf **/cjs/*.cjs.js.map",
+    "build": "npm run cleanup-cjs && rollup -c",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run lint"
   },
   "engines": {
