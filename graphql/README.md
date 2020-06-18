@@ -4,10 +4,6 @@ graphql middleware for nanoexpress
 
 > You can use express `express-graphql` middleware instead of this middleware
 
-## Why
-
-If you using middleware for `nanoexpress`, performance will be faster due of this middleware was optimized to work for `nanoexpress`
-
 ## Caveats
 
 - This middleware supports only HTTP bindings, not WebSocket/PubSub/Subscription bindings
@@ -26,10 +22,6 @@ import graphql from '@nanoexpress/middlewares/graphql';
 
 app.use('/graphql', graphql(GraphQLSchema));
 ```
-
-### CJS Module
-
-> For installing CJS variant, try `npm i nanoexpress/middlewares#cjs` as always there will be CJS builds
 
 ```js
 const graphql = require('@nanoexpress/middlewares/graphql/cjs');

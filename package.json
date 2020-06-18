@@ -14,7 +14,7 @@
     "prepublishOnly": "npm run lint"
   },
   "engines": {
-    "node": ">=12.16"
+    "node": ">=12.17"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "husky": "^4.2.1",
+    "lerna": "^3.22.1",
     "lint-staged": "^10.1.2",
     "prettier": "^2.0.4",
     "rollup": "^2.3.3"

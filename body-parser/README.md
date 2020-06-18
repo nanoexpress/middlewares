@@ -4,10 +4,6 @@ body-parser middleware for nanoexpress
 
 > You can use express `body-parser` middleware instead of this middleware
 
-## Why
-
-If you using middleware for `nanoexpress`, performance will be faster due of this middleware was optimized to work for `nanoexpress`
-
 ## Example
 
 See the [examples](./examples) directory
@@ -21,10 +17,6 @@ import bodyParser from '@nanoexpress/middlewares/body-parser';
 
 app.use(bodyParser());
 ```
-
-### CJS Module
-
-> For installing CJS variant, try `npm i nanoexpress/middlewares#cjs` as always there will be CJS builds
 
 ```js
 const bodyParser = require('@nanoexpress/middlewares/body-parser/cjs');
