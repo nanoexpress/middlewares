@@ -7,8 +7,6 @@
 
 List of middlewares for nanoexpress
 
-> This (master) branch supports only ESM, for CJS support, please check out **CJS** branch
-
 ## Note
 
 Only 3 middleware was left to moving here

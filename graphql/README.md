@@ -18,7 +18,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import graphql from '@nanoexpress/middlewares/graphql';
+import graphql from '@nanoexpress/middlewares/graphql/graphql.es.js';
 
 app.use('/graphql', graphql(GraphQLSchema));
 ```

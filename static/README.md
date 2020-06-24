@@ -13,7 +13,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import staticServe from '@nanoexpress/middlewares/static';
+import staticServe from '@nanoexpress/middlewares/static/static.es.js';
 
 app.use(staticServe('./static'));
 ```

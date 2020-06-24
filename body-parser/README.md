@@ -13,7 +13,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import bodyParser from '@nanoexpress/middlewares/body-parser';
+import bodyParser from '@nanoexpress/middlewares/body-parser/body-parser.es.js';
 
 app.use(bodyParser());
 ```

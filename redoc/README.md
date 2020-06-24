@@ -9,7 +9,7 @@ See [here](https://github.com/Redocly/redoc/) for more info
 ### ESM Module
 
 ```js
-import reDoc from '@nanoexpress/middlewares/redoc';
+import reDoc from '@nanoexpress/middlewares/redoc/redoc.es.js';
 
 app.define(swagger); // For nanoexpress-pro this line doesn't need
 app.use(reDoc());
