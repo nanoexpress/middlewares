@@ -20,8 +20,8 @@ export default function graphql(schema, root) {
       res.writeHeader('content-type', 'application/json');
 
       let graphqlQuery = '';
-      let variables = undefined;
-      let operationName = undefined;
+      let variables;
+      let operationName;
 
       if (typeof body === 'object' && body) {
         graphqlQuery = body.query || body.mutation;
