@@ -1,34 +1,32 @@
-import { promises as fs } from 'fs';
-import { join } from 'path';
+import fs from 'fs';
+import path from 'path';
 import { getMime } from './mime.js';
 
-async function handleDirectory(path) {
-  if ((await fs.stat(path)).isDirectory()) {
+function handleDirectory(path) {
+  if (fs.statSync(path).isDirectory()) {
     return {
-      files: await precacheStatic(path),
+      files: precacheStatic(path),
       reduce: true
     };
   }
 }
 
-async function precacheFolder(path) {
+function precacheFolder(path) {
   try {
-    const files = await fs.readdir(path);
+    const files = fs.readdirSync(path);
 
-    const handledFiles = await Promise.all(
-      files.map(async (file) => await handleItem(path, file))
-    );
+    const handledFiles = files.map((file) => handleItem(path, file));
 
     return handledFiles;
   } catch (e) {
-    throw new Error('[nanoexpress::Middlewares]: {static} Precache failed');
+    throw new Error('[nanoexpress::Middlewares]: {static} Precache failed', e);
   }
 }
 
-async function handleItem(path, file) {
-  const resolved = join(path, file);
+function handleItem(filePath, file) {
+  const resolved = path.join(filePath, file);
 
-  const isDirectory = await handleDirectory(resolved);
+  const isDirectory = handleDirectory(resolved);
   if (isDirectory !== undefined) {
     return isDirectory;
   }
@@ -39,7 +37,7 @@ async function handleItem(path, file) {
     file,
     resolved,
     streamable,
-    raw: streamable ? null : await fs.readFile(resolved)
+    raw: streamable ? null : fs.readFileSync(resolved)
   };
 }
 
@@ -54,6 +52,6 @@ function mergeCaches(cache) {
   }, []);
 }
 
-export default async function precacheStatic(path) {
-  return mergeCaches(await precacheFolder(path));
+export default function precacheStatic(path) {
+  return mergeCaches(precacheFolder(path));
 }
