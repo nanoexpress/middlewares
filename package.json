@@ -1,6 +1,6 @@
 {
   "name": "@nanoexpress/middlewares",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Middleware packages for nanoexpress",
   "type": "module",
   "funding": {
