@@ -2,6 +2,16 @@
 
 PassportJS middleware wrapper for nanoexpress
 
+## Dependencies
+
+Install dependencies with `npm i DEPENDECY_NAME`
+
+- passport
+
+## Example
+
+See the [examples](./examples) directory
+
 ## Usage
 
 See [here](http://www.passportjs.org) for more info
