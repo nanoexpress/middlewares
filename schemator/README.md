@@ -72,7 +72,7 @@ app.get(
     attach: '/auth',
     method: 'get',
     raw: {
-      paths: {
+      path: {
         '/': {
           /* infos here */
         }
