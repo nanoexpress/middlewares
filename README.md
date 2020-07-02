@@ -9,9 +9,9 @@ List of middlewares for nanoexpress
 
 ## Note
 
-Only 2 middleware was left to moving here
+Only ONE middleware was left to moving here
 
-2. `file-upload` - File-upload middleware
+1. `file-upload` - File-upload middleware
 
 Due of a lot tasks on my full-time job, i cannot add these currently or with-in this month, but i will add these when i will get time
 
