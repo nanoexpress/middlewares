@@ -4,6 +4,12 @@ graphql middleware for nanoexpress
 
 > You can use express `express-graphql` middleware instead of this middleware
 
+## Dependencies
+
+Install dependencies with `npm i DEPENDECY_NAME`
+
+- graphql
+
 ## Caveats
 
 - This middleware supports only HTTP bindings, not WebSocket/PubSub/Subscription bindings

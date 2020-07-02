@@ -26,11 +26,11 @@ app.use(reDoc());
 
 ## Options
 
-All of options are optional
-
-- `options.title` [default=`nanoexpress - ReDoc`] - Title of documentation page
-- `options.path` [default=`/docs/`] - Path of documentation page
-- `options.url` - URL of Swagger file
+| Options name    | Default             | Required | Description                 |
+| --------------- | ------------------- | -------- | --------------------------- |
+| `options.title` | nanoexpress - ReDoc | No       | Title of documentation page |
+| `options.path`  | `/docs`             | No       | Path of documentation page  |
+| `options.url`   | -                   | No       | URL of Swagger file         |
 
 ## License
 

@@ -5,7 +5,7 @@
  * @param {String=} options.path Path of documentation page
  * @param {String=} options.url URL of Swagger file
  * @default options.title nanoexpress - ReDoc
- * @default options.path /docs/
+ * @default options.path /docs
  *
  * @example
  * app.use(redoc())

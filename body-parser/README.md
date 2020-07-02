@@ -28,11 +28,11 @@ app.use(bodyParser());
 
 ## Options
 
-All of options are optional
-
-- `options.json` [default=true] - Parse JSON data with content-type of `application/json` or `text/json` into JS Object?
-- `options.experimentalJsonParse` [default=false] - Experimental JSON parser, better performance, but not stable yet
-- `options.urlEncoded` [default=true] - Parse JSON data with content-type of `x-www-form-urlencoded` into JS Object?
+| Options name                    | Default | Required | Description                                                                            |
+| ------------------------------- | ------- | -------- | -------------------------------------------------------------------------------------- |
+| `options.json`                  | true    | No       | Parse JSON data with content-type of `application/json` or `text/json` into JS Object? |
+| `options.experimentalJsonParse` | false   | No       | Experimental JSON parser, better performance, but not stable yet                       |
+| `options.urlEncoded`            | true    | No       | Parse JSON data with content-type of `x-www-form-urlencoded` into JS Object?           |
 
 ## License
 
