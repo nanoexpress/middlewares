@@ -29,7 +29,7 @@ app.use(reDoc());
 | Options name    | Default             | Required | Description                 |
 | --------------- | ------------------- | -------- | --------------------------- |
 | `options.title` | nanoexpress - ReDoc | No       | Title of documentation page |
-| `options.path`  | `/docs/`            | No       | Path of documentation page  |
+| `options.path`  | `/docs`             | No       | Path of documentation page  |
 | `options.url`   | -                   | No       | URL of Swagger file         |
 
 ## License

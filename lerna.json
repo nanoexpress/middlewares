@@ -1,4 +1,11 @@
 {
-  "packages": ["body-parser", "static", "redoc", "graphql", "schemator"],
+  "packages": [
+    "body-parser",
+    "static",
+    "redoc",
+    "graphql",
+    "schemator",
+    "swagger-ui"
+  ],
   "version": "0.1.0"
 }

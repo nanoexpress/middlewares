@@ -9,11 +9,10 @@ List of middlewares for nanoexpress
 
 ## Note
 
-Only 3 middleware was left to moving here
+Only 2 middleware was left to moving here
 
 1. `passport` - Polyfill and fully-functional passportjs middleware
-2. `swagger-ui` - Swagger UI for Swagger documentation
-3. `file-upload` - File-upload middleware
+2. `file-upload` - File-upload middleware
 
 Due of a lot tasks on my full-time job, i cannot add these currently or with-in this month, but i will add these when i will get time
 
@@ -48,6 +47,7 @@ For more info, go-to middleware documentation by click to link
 - [static](./static)
 - [graphql](./graphql)
 - [redoc](./redoc)
+- [swagger-ui](./swagger-ui)
 - [schemator](./schemator)
 
 ## License
