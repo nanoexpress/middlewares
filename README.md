@@ -48,9 +48,7 @@ For more info, go-to middleware documentation by click to link
 - [static](./static)
 - [graphql](./graphql)
 - [redoc](./redoc)
-- [schemator](./schemator)\*
-
-\* - Compatible only with **pro-slim** version, not PRO itself
+- [schemator](./schemator)
 
 ## License
 
