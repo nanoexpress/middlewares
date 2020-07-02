@@ -8,6 +8,7 @@ You can think this middleware combine of **Swagger documentation** and **Ajv** v
 
 Install dependencies with `npm i DEPENDECY_NAME`
 
+- ajv
 - swagger-ui-dist
 - js-yaml
 - getdirname
