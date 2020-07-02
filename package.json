@@ -1,6 +1,6 @@
 {
   "name": "@nanoexpress/middlewares",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Middleware packages for nanoexpress",
   "type": "module",
   "funding": {
@@ -8,8 +8,8 @@
     "url": "https://www.patreon.com/dalisoft"
   },
   "scripts": {
-    "lint:prettier": "prettier static/*.js && prettier body-parser/*.js && prettier graphql/*.js && prettier redoc/*.js",
-    "lint:eslint": "eslint static/*.js && eslint body-parser/*.js && eslint graphql/*.js && eslint redoc/*.js",
+    "lint:prettier": "prettier -c static body-parser graphql redoc schemator",
+    "lint:eslint": "eslint static body-parser graphql redoc schemator",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "cleanup-cjs": "rm -rf **/cjs/*.cjs.js && rm -rf **/cjs/*.cjs.js.map",
     "build": "npm run cleanup-cjs && rollup -c",
@@ -42,6 +42,10 @@
     "rollup": "^2.18.1"
   },
   "peerDependencies": {
-    "graphql": "^15.0.0"
+    "graphql": "^15.0.0",
+    "js-yaml": "^3.14.0",
+    "getdirname": "^0.0.7",
+    "swagger-ui-dist": "^3.28.0",
+    "ajv": "^6.12.2"
   }
 }

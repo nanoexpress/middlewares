@@ -1,4 +1,4 @@
 {
-  "packages": ["body-parser", "static", "redoc", "graphql"],
-  "version": "0.0.4"
+  "packages": ["body-parser", "static", "redoc", "graphql", "schemator"],
+  "version": "0.0.6"
 }

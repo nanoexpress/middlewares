@@ -2,8 +2,6 @@
 
 Static file serve middleware for nanoexpress
 
-> You can use express `static-serve` middleware instead of this middleware
-
 ## Example
 
 See the [examples](./examples) directory
@@ -28,19 +26,23 @@ app.use(staticServe('./static'));
 
 ## Arguments
 
-- `path` [string] - Path of your static serve folder
-- `options` [object] - See below
+| Name    | Type   | Description                      |
+| ------- | ------ | -------------------------------- |
+| path    | String | Path of your static serve folder |
+| options | Object | See [Options](#options)          |
 
 ## Options
 
-All of options are optional
+| Options name           | Default      | Required | Description                                    |
+| ---------------------- | ------------ | -------- | ---------------------------------------------- |
+| `options.mode`         | cached       | No       | Serve mode\*, has two values - Cached and Live |
+| `options.index`        | `index.html` | No       | Index filename                                 |
+| `options.forcePretty`  | false        | No       | Force appending index-file path                |
+| `options.addPrettyUrl` | true         | No       | Enable pretty url by auto-appending index-file |
+| `options.lastModified` | true         | No       | Enable browsers **Last-modified** check        |
+| `options.compressed`   | true         | No       | Compress response/response streams             |
 
-- `options.mode` [default=cached] - Serve mode, has two values - Cached and Live. Cached gives better performance, but on refresh gives cached result and uses more RAM. Live mode uses less memory usage, on request responses last version but on high-load applicatins may reduces performance
-- `options.index` [default=index.html] - Index filename
-- `options.forcePretty` [default=false] - Force appending index-file path even path isn't as root
-- `options.addPrettyUrl` [default=true] - Enable pretty url by auto-appending index-file, so works `/` like `/index.html`
-- `options.lastModified` [default=true] - Enable last-modified check, if file not modified, returns empty request with 304 status
-- `options.compressed` [default=true] - Compress response/response streams
+\* - Cached gives better performance, but on refresh gives cached result and uses more RAM. Live mode uses less memory usage, on request responses last version but on high-load applicatins may reduces performance
 
 ## License
 

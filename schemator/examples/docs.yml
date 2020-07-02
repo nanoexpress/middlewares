@@ -1,0 +1,47 @@
+---
+path:
+  /:
+    get:
+      summary: Default route
+      description: Anyone can access to it
+      consumes: application/json
+      produces: application/json
+      responses:
+        200:
+          description: Success response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: success
+      parameters:
+        - in: headers
+          description: Тип контента
+          name: content-type
+          schema:
+            type: string
+            required: true
+            default: application/json
+            enum:
+              - application/json
+    post:
+      summary: Default POST route
+      description: Anyone can access to it
+      consumes: application/json
+      produces: application/json
+      requestBody:
+        description: E-Mail Body
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: foo@bar.baz
