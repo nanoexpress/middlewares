@@ -1,4 +1,13 @@
-const external = ['querystring', 'graphql', 'fs', 'path'];
+const external = [
+  'querystring',
+  'graphql',
+  'fs',
+  'path',
+  'getdirname',
+  'ajv',
+  'js-yaml',
+  'fast-json-stringify'
+];
 
 export default ['body-parser', 'static', 'graphql', 'redoc', 'schemator'].map(
   (name) => ({
