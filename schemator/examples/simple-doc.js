@@ -1,5 +1,5 @@
 import nanoexpress from '@nanoexpress/pro-slim'; // Or your choice, you can use PRO version itself
-import schemator from '..';
+import schemator from '../schemator.es.js';
 
 import swaggerUiDist from 'swagger-ui-dist';
 

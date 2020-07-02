@@ -4,7 +4,11 @@ import fastJsonStringify from 'fast-json-stringify';
 import getdirname from 'getdirname';
 
 import importize from '../utils/importize.js';
-import { schemaPrepare, validatorPrepare } from '../utils/schema-prepare.js';
+import {
+  schemaPrepare,
+  validatorPrepare,
+  flatObjects
+} from '../utils/schema-prepare.js';
 
 /**
  * Schemator loading router method
@@ -91,7 +95,7 @@ export default function load(
       .map(([code, { content }]) => ({
         [code]: schemaPrepare(content, fastJsonStringify)
       }))
-      .reduce((acc, item) => Object.assign(acc, item), {});
+      .reduce(flatObjects, undefined);
 
   return async (req, res) => {
     const bodyContentType = req.headers['content-type'] || 'application/json';
@@ -105,7 +109,11 @@ export default function load(
       res.writeHeader('Content-Type', responseContentType);
       res.writeStatus(res.statusCode);
 
+      // PRO-Slim version polyfill
       res.serialize = serializer;
+
+      // PRO version polyfill
+      res.fastJson = serializer;
     }
 
     let errors;
