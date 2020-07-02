@@ -15,7 +15,7 @@ import {
  * @param {object} swaggerObject Internal Swagger instance
  * @param {object} config Schemator route load configuration
  * @param {string} config.method Your router method
- * @param {string} config.attach Your router path
+ * @param {string} config.attach Your router path (with Swagger path format)
  * @param {string} config.path Route Swagger schema file path
  * @param {string} config.raw Route Swagger schema RAW Object
  * @param {object} ajvConfig

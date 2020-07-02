@@ -148,12 +148,12 @@ app.get(
 
 ### `schematorInstance.load(options, AjvConfig)` options
 
-| Options name     | Default | Required              | Description                     |
-| ---------------- | ------- | --------------------- | ------------------------------- |
-| `options.method` | -       | Yes                   | Your router method              |
-| `options.attach` | -       | Yes                   | Your router path                |
-| `options.path`   | -       | Yes or `options.raw`  | Route Swagger schema file path  |
-| `options.raw`    | -       | Yes or `options.path` | Route Swagger schema RAW Object |
+| Options name     | Default | Required              | Description                                 |
+| ---------------- | ------- | --------------------- | ------------------------------------------- |
+| `options.method` | -       | Yes                   | Your router method (lowercase)              |
+| `options.attach` | -       | Yes                   | Your router path (with Swagger path format) |
+| `options.path`   | -       | Yes or `options.raw`  | Route Swagger schema file path              |
+| `options.raw`    | -       | Yes or `options.path` | Route Swagger schema RAW Object             |
 
 See [Ajv configurations](https://ajv.js.org/#options) for more customization
 
