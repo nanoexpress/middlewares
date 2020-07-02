@@ -5,7 +5,8 @@
     "redoc",
     "graphql",
     "schemator",
-    "swagger-ui"
+    "swagger-ui",
+    "passport"
   ],
   "version": "0.1.0"
 }

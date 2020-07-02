@@ -6,7 +6,10 @@ const external = [
   'getdirname',
   'ajv',
   'js-yaml',
-  'fast-json-stringify'
+  'fast-json-stringify',
+  'swagger-ui-dist',
+  'passport',
+  'passport/lib/http/request'
 ];
 
 export default [
@@ -15,7 +18,8 @@ export default [
   'graphql',
   'redoc',
   'schemator',
-  'swagger-ui'
+  'swagger-ui',
+  'passport'
 ].map((name) => ({
   input: `./${name}/${name}.es.js`,
   output: {
