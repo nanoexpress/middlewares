@@ -11,7 +11,7 @@
     "lint:prettier": "prettier -c .",
     "lint:eslint": "eslint .",
     "lint": "npm run lint:prettier && npm run lint:eslint",
-    "cleanup-cjs": "rm -rf **/cjs/*.cjs.js && rm -rf **/cjs/*.cjs.js.map",
+    "cleanup-cjs": "shx rm -rf **/cjs/*.cjs.js && shx rm -rf **/cjs/*.cjs.js.map",
     "build": "npm run cleanup-cjs && rollup -c",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint"
@@ -39,7 +39,8 @@
     "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
-    "rollup": "^2.18.1"
+    "rollup": "^2.18.1",
+    "shx": "^0.3.2"
   },
   "peerDependencies": {
     "graphql": "^15.0.0",
