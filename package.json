@@ -3,10 +3,17 @@
   "version": "0.1.1",
   "description": "Middleware packages for nanoexpress",
   "type": "module",
-  "funding": {
-    "type": "patreon",
-    "url": "https://www.patreon.com/dalisoft"
-  },
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/nanoexpress"
+    },
+    "http://buymeacoffee.com/dalisoft",
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/dalisoft"
+    }
+  ],
   "scripts": {
     "lint:prettier": "prettier -c .",
     "lint:eslint": "eslint .",
