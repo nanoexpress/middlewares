@@ -21,11 +21,13 @@ export default [
   'swagger-ui',
   'passport'
 ].map((name) => ({
-  input: `./${name}/${name}.es.js`,
+  input: `./packages/${name}/${name}.es.js`,
   output: {
     format: 'cjs',
-    file: `./${name}/cjs/${name}.cjs.js`,
-    strict: false
+    file: `.//packages/${name}/cjs/${name}.cjs.js`,
+    strict: true,
+    sourcemap: 'inline',
+    exports: 'default'
   },
   external
 }));

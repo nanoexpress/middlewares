@@ -11,7 +11,7 @@
   },
   "scripts": {
     "lint": "smartlint",
-    "build": "lerna build",
+    "build": "rollup -c",
     "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo"
   },
   "devDependencies": {
