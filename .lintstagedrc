@@ -1,4 +1,0 @@
-{
-  "*.{json,scss,css,md,yml}": ["prettier -c --config .prettierrc"],
-  "*.js": ["eslint", "prettier -c --config .prettierrc"]
-}

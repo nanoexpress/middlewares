@@ -1,0 +1,39 @@
+{
+  "name": "@nanoexpress/middleware-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL middleware for nanoexpress",
+  "type": "module",
+  "main": "cjs/graphql.cjs.js",
+  "module": "graphql.es.js",
+  "typings": "graphql.d.ts",
+  "exports": {
+    ".": "./cjs/graphql.cjs.js",
+    "./module": "./graphql.es.js",
+    "./cjs/": "./cjs/"
+  },
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/dalisoft"
+  },
+  "engines": {
+    "node": ">=12.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoexpress/middlewares.git"
+  },
+  "keywords": [
+    "nanoexpress",
+    "middlewares",
+    "graphql"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanoexpress/middlewares/issues"
+  },
+  "homepage": "https://github.com/nanoexpress/middlewares#readme",
+  "dependencies": {
+    "graphql": "^15.0.0"
+  }
+}

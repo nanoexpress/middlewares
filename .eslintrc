@@ -1,40 +1,16 @@
 {
-  "extends": "eslint:recommended",
-  "plugins": [],
-  "env": {
-    "node": true,
-    "browser": false,
-    "es6": true
-  },
+  "extends": "airlight-node",
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "project": "./tsconfig.json"
   },
   "rules": {
-    "comma-dangle": ["error", "never"],
-    "comma-spacing": [
-      "error",
+    "no-param-reassign": "off",
+    "node/no-unsupported-features/es-syntax": [
+      "off",
       {
-        "before": false,
-        "after": true
+        "version": ">=12.16.0",
+        "ignores": []
       }
-    ],
-    "eol-last": ["error", "always"],
-    "indent": "off",
-    "no-multiple-empty-lines": ["error"],
-    "no-new-symbol": "error",
-    "no-trailing-spaces": ["error"],
-    "no-undef": ["error"],
-    "no-unused-vars": ["error"],
-    "no-console": 0,
-    "object-curly-spacing": ["error", "always"],
-    "object-shorthand": "error",
-    "prefer-const": 2,
-    "quotes": "off",
-    "semi": ["error", "always"],
-    "space-in-parens": ["error", "never"],
-    "strict": [2, "never"],
-    "max-len": ["error", 120],
-    "require-atomic-updates": 0
+    ]
   }
 }

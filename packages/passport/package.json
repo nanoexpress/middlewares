@@ -1,0 +1,39 @@
+{
+  "name": "@nanoexpress/middleware-passport",
+  "version": "1.0.0",
+  "description": "PassportJS middleware wrapper for nanoexpress",
+  "type": "module",
+  "main": "cjs/passport.cjs.js",
+  "module": "passport.es.js",
+  "exports": {
+    ".": "./cjs/passport.cjs.js",
+    "./module": "./passport.es.js",
+    "./cjs/": "./cjs/"
+  },
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/dalisoft"
+  },
+  "engines": {
+    "node": ">=12.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoexpress/middlewares.git"
+  },
+  "keywords": [
+    "nanoexpress",
+    "middlewares",
+    "passport",
+    "auth"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanoexpress/middlewares/issues"
+  },
+  "homepage": "https://github.com/nanoexpress/middlewares#readme",
+  "dependencies": {
+    "passport": "^0.4.1"
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "name": "@nanoexpress/middleware-swagger-ui",
-  "version": "0.0.1",
-  "description": "Swagger UI Frontend middleware",
-  "type": "module",
-  "main": "swagger-ui.es.js",
-  "module": "swagger-ui.es.js",
-  "typings": "swagger-ui.d.ts"
-}

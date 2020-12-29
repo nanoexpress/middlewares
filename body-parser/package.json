@@ -1,9 +1,0 @@
-{
-  "name": "@nanoexpress/middleware-body-parser",
-  "version": "0.0.1",
-  "description": "Body-parser middleware for nanoexpress",
-  "type": "module",
-  "main": "body-parser.es.js",
-  "module": "body-parser.es.js",
-  "typings": "body-parser.d.ts"
-}

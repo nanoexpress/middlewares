@@ -15,14 +15,6 @@ Only ONE middleware was left to moving here
 
 Due of a lot tasks on my full-time job, i cannot add these currently or with-in this month, but i will add these when i will get time
 
-## Installation
-
-```bash
-npm i nanoexpress/middlewares
-# or
-yarn add nanoexpress/middlewares
-```
-
 ## Features
 
 - Better documentation
@@ -31,24 +23,17 @@ yarn add nanoexpress/middlewares
 - TypeScript/IDE Support
 - JSDoc Annonations
 
-## Compatibility
-
-This library compatible with
-
-- [nanoexpress/pro](https://github.com/nanoexpress/pro)
-- [nanoexpress/pro-slim](https://github.com/nanoexpress/pro-slim)
-
 ## List
 
 For more info, go-to middleware documentation by click to link
 
-- [body-parser](./body-parser)
-- [static](./static)
-- [graphql](./graphql)
-- [redoc](./redoc)
-- [swagger-ui](./swagger-ui)
-- [schemator](./schemator)
-- [passport](./passport)
+- [body-parser](./packages/body-parser)
+- [static](./packages/static)
+- [graphql](./packages/graphql)
+- [redoc](./packages/redoc)
+- [swagger-ui](./packages/swagger-ui)
+- [schemator](./packages/schemator)
+- [passport](./packages/passport)
 
 ## License
 
