@@ -1,0 +1,35 @@
+{
+  "name": "@nanoexpress/middleware-swagger-ui",
+  "version": "0.0.1",
+  "description": "Swagger UI Frontend middleware",
+  "type": "module",
+  "main": "swagger-ui.es.js",
+  "module": "swagger-ui.es.js",
+  "typings": "swagger-ui.d.ts",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/dalisoft"
+  },
+  "engines": {
+    "node": ">=12.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoexpress/middlewares.git"
+  },
+  "keywords": [
+    "nanoexpress",
+    "middlewares",
+    "swagger",
+    "ui"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanoexpress/middlewares/issues"
+  },
+  "homepage": "https://github.com/nanoexpress/middlewares#readme",
+  "dependencies": {
+    "swagger-ui-dist": "^3.28.0"
+  }
+}

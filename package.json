@@ -1,60 +1,31 @@
 {
   "name": "@nanoexpress/middlewares",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Middleware packages for nanoexpress",
-  "type": "module",
-  "funding": [
-    {
-      "type": "opencollective",
-      "url": "https://opencollective.com/nanoexpress"
-    },
-    "https://www.buymeacoffee.com/dalisoft",
-    "https://www.paypal.me/dalisoft",
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/dalisoft"
-    }
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "scripts": {
-    "lint:prettier": "prettier -c .",
-    "lint:eslint": "eslint .",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
-    "cleanup-cjs": "shx rm -rf **/cjs/*.cjs.js && shx rm -rf **/cjs/*.cjs.js.map",
-    "build": "npm run cleanup-cjs && rollup -c",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run lint"
-  },
   "engines": {
-    "node": ">=12.17"
+    "node": ">=12.16.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nanoexpress/middlewares.git"
+  "scripts": {
+    "lint": "smartlint",
+    "build": "lerna build",
+    "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo"
   },
-  "keywords": [
-    "nanoexpress",
-    "middlewares"
-  ],
-  "author": "dalisoft",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nanoexpress/middlewares/issues"
-  },
-  "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "devDependencies": {
-    "eslint": "^7.15.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
+    "eslint-config-airlight-node": "^1.0.7",
     "husky": "^4.3.6",
+    "husky-config-airlight": "^0.0.1",
     "lerna": "^3.22.1",
     "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1",
+    "lint-staged-config-airlight": "^1.0.4",
+    "prettier-config-airlight": "^0.0.1",
     "rollup": "^2.35.1",
-    "shx": "^0.3.3"
-  },
-  "peerDependencies": {
-    "graphql": "^15.0.0",
-    "js-yaml": "^3.14.0",
-    "getdirname": "^0.0.7",
-    "swagger-ui-dist": "^3.28.0",
-    "ajv": "^6.12.2"
+    "smartlint": "^1.0.5",
+    "typescript": "4.0.5"
   }
 }

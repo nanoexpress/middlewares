@@ -1,8 +1,0 @@
-{
-  "name": "@nanoexpress/middleware-passport",
-  "version": "0.0.1",
-  "description": "PassportJS middleware wrapper for nanoexpress",
-  "type": "module",
-  "main": "passport.es.js",
-  "module": "passport.es.js"
-}

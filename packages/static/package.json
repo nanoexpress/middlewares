@@ -1,0 +1,32 @@
+{
+  "name": "@nanoexpress/middleware-static-serve",
+  "version": "0.0.2",
+  "description": "Static file serve middleware for nanoexpress",
+  "type": "module",
+  "main": "static.es.js",
+  "module": "static.es.js",
+  "typings": "static.d.ts",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/dalisoft"
+  },
+  "engines": {
+    "node": ">=12.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoexpress/middlewares.git"
+  },
+  "keywords": [
+    "nanoexpress",
+    "middlewares",
+    "static",
+    "serve"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanoexpress/middlewares/issues"
+  },
+  "homepage": "https://github.com/nanoexpress/middlewares#readme"
+}

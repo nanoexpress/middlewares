@@ -1,12 +1,13 @@
 {
-  "packages": [
-    "body-parser",
-    "static",
-    "redoc",
-    "graphql",
-    "schemator",
-    "swagger-ui",
-    "passport"
-  ],
-  "version": "0.1.0"
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "stream": true,
+  "command": {
+    "publish": {
+      "changelogPreset": "@commitlint/config-lerna-scopes",
+      "conventionalCommits": true,
+      "createRelease": "github"
+    }
+  }
 }

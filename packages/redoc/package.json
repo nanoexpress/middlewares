@@ -1,0 +1,33 @@
+{
+  "name": "@nanoexpress/middleware-redoc",
+  "version": "0.0.1",
+  "description": "ReDOC middleware for nanoexpress",
+  "type": "module",
+  "main": "redoc.es.js",
+  "module": "redoc.es.js",
+  "typings": "redoc.d.ts",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/dalisoft"
+  },
+  "engines": {
+    "node": ">=12.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoexpress/middlewares.git"
+  },
+  "keywords": [
+    "nanoexpress",
+    "middlewares",
+    "swagger",
+    "ui",
+    "redoc"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanoexpress/middlewares/issues"
+  },
+  "homepage": "https://github.com/nanoexpress/middlewares#readme"
+}
