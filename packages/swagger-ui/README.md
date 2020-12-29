@@ -4,6 +4,14 @@ Swagger UI Frontend middleware
 
 ## This middleware is marked as legacy and should be used only for supporting old project
 
+## Installation
+
+```bash
+npm i @nanoexpress/middleware-swagger-ui
+# or
+yarn add @nanoexpress/middleware-swagger-ui
+```
+
 ## Example
 
 See the [examples](./examples) directory
@@ -13,7 +21,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import swaggerUi from '@nanoexpress/middlewares/swagger-ui/swagger-ui.es.js';
+import swaggerUi from '@nanoexpress/middleware-swagger-ui';
 
 app.define(swagger); // For nanoexpress this line doesn't need
 app.use('/swagger-ui-dist', swaggerUi());
@@ -22,7 +30,7 @@ app.use('/swagger-ui-dist', swaggerUi());
 ### CJS Module
 
 ```js
-const swaggerUi = require('@nanoexpress/middlewares/swagger-ui/cjs');
+const swaggerUi = require('@nanoexpress/middleware-swagger-ui/cjs');
 
 app.define(swagger); // For nanoexpress this line doesn't need
 app.use('/swagger-ui-dist', swaggerUi());

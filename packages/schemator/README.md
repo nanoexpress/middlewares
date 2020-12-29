@@ -4,6 +4,14 @@ schemator middleware for nanoexpress
 
 You can think this middleware combine of **Swagger documentation** and **Ajv** validation like original **nanoexpress** built-in feature + **swagger-ui** middleware
 
+## Installation
+
+```bash
+npm i @nanoexpress/middleware-schemator
+# or
+yarn add @nanoexpress/middleware-schemator
+```
+
 ## Schema type
 
 - YML (preferred)
@@ -85,7 +93,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import schemator from '@nanoexpress/middlewares/schemator/schemator.es.js';
+import schemator from '@nanoexpress/middleware-schemator';
 
 const schematorInstance = schemator({ swaggerPath: './swagger.yml' });
 
@@ -108,7 +116,7 @@ app.get(
 ### CJS Module
 
 ```js
-const bodyParser = require('@nanoexpress/middlewares/schemator/cjs');
+const bodyParser = require('@nanoexpress/middleware-schemator/cjs');
 
 const schematorInstance = schemator({ swaggerPath: './swagger.yml' });
 

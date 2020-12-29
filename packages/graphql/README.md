@@ -4,11 +4,13 @@ graphql middleware for nanoexpress
 
 > You can use express `express-graphql` middleware instead of this middleware
 
-## Dependencies
+## Installation
 
-Install dependencies with `npm i DEPENDECY_NAME`
-
-- graphql
+```bash
+npm i @nanoexpress/middleware-graphql
+# or
+yarn add @nanoexpress/middleware-graphql
+```
 
 ## Caveats
 
@@ -24,7 +26,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import graphql from '@nanoexpress/middlewares/graphql/graphql.es.js';
+import graphql from '@nanoexpress/middleware-body-parser;
 
 app.use('/graphql', graphql(GraphQLSchema));
 ```
@@ -32,7 +34,7 @@ app.use('/graphql', graphql(GraphQLSchema));
 ### CJS Module
 
 ```js
-const graphql = require('@nanoexpress/middlewares/graphql/cjs');
+const graphql = require('@nanoexpress/middleware-body-parser/cjs');
 
 app.use('/graphql', graphql(GraphQLSchema));
 ```

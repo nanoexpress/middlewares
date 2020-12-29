@@ -4,6 +4,14 @@ body-parser middleware for nanoexpress
 
 > You can use express `body-parser` middleware instead of this middleware
 
+## Installation
+
+```bash
+npm i @nanoexpress/middleware-body-parser
+# or
+yarn add @nanoexpress/middleware-body-parser
+```
+
 ## Example
 
 See the [examples](./examples) directory
@@ -13,7 +21,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import bodyParser from '@nanoexpress/middlewares/body-parser/body-parser.es.js';
+import bodyParser from '@nanoexpress/middleware-body-parser';
 
 app.use(bodyParser());
 ```
@@ -21,7 +29,7 @@ app.use(bodyParser());
 ### CJS Module
 
 ```js
-const bodyParser = require('@nanoexpress/middlewares/body-parser/cjs');
+const bodyParser = require('@nanoexpress/middleware-body-parser/cjs');
 
 app.use(bodyParser());
 ```

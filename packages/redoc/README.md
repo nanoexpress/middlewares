@@ -2,6 +2,14 @@
 
 redoc middleware for nanoexpress swagger
 
+## Installation
+
+```bash
+npm i @nanoexpress/middleware-redoc
+# or
+yarn add @nanoexpress/middleware-redoc
+```
+
 ## Usage
 
 See [here](https://github.com/Redocly/redoc/) for more info
@@ -9,7 +17,7 @@ See [here](https://github.com/Redocly/redoc/) for more info
 ### ESM Module
 
 ```js
-import reDoc from '@nanoexpress/middlewares/redoc/redoc.es.js';
+import reDoc from '@nanoexpress/middleware-redoc';
 
 app.define(swagger); // For nanoexpress this line doesn't need
 app.use(reDoc());
@@ -18,7 +26,7 @@ app.use(reDoc());
 ### CJS Module
 
 ```js
-const reDoc = require('@nanoexpress/middlewares/redoc/cjs');
+const reDoc = require('@nanoexpress/middleware-redoc/cjs');
 
 app.define(swagger); // For nanoexpress this line doesn't need
 app.use(reDoc());

@@ -2,6 +2,14 @@
 
 Static file serve middleware for nanoexpress
 
+## Installation
+
+```bash
+npm i @nanoexpress/middleware-static-serve
+# or
+yarn add @nanoexpress/middleware-static-serve
+```
+
 ## Example
 
 See the [examples](./examples) directory
@@ -11,7 +19,7 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import staticServe from '@nanoexpress/middlewares/static/static.es.js';
+import staticServe from '@nanoexpress/middleware-static-serve';
 
 app.use(staticServe('./static'));
 ```
@@ -19,7 +27,7 @@ app.use(staticServe('./static'));
 ### CJS Module
 
 ```js
-const staticServe = require('@nanoexpress/middlewares/static/cjs');
+const staticServe = require('@nanoexpress/middleware-static-serve/cjs');
 
 app.use(staticServe('./static'));
 ```
