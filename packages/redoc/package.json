@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "description": "ReDOC middleware for nanoexpress",
   "type": "module",
-  "main": "redoc.es.js",
+  "main": "cjs/redoc.cjs.js",
   "module": "redoc.es.js",
   "typings": "redoc.d.ts",
+  "exports": {
+    ".": "./cjs/redoc.cjs.js",
+    "./module": "./redoc.es.js",
+    "./cjs/": "./cjs/"
+  },
   "funding": {
     "type": "patreon",
     "url": "https://www.patreon.com/dalisoft"

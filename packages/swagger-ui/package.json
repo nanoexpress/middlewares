@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "description": "Swagger UI Frontend middleware",
   "type": "module",
-  "main": "swagger-ui.es.js",
+  "main": "cjs/swagger-ui.cjs.js",
   "module": "swagger-ui.es.js",
   "typings": "swagger-ui.d.ts",
+  "exports": {
+    ".": "./cjs/swagger-ui.cjs.js",
+    "./module": "./swagger-ui.es.js",
+    "./cjs/": "./cjs/"
+  },
   "funding": {
     "type": "patreon",
     "url": "https://www.patreon.com/dalisoft"

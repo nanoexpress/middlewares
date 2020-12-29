@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "description": "Schemator middleware for nanoexpress",
   "type": "module",
-  "main": "schemator.es.js",
+  "main": "cjs/schemator.cjs.js",
   "module": "schemator.es.js",
   "typings": "schemator.d.ts",
+  "exports": {
+    ".": "./cjs/schemator.cjs.js",
+    "./module": "./schemator.es.js",
+    "./cjs/": "./cjs/"
+  },
   "funding": {
     "type": "patreon",
     "url": "https://www.patreon.com/dalisoft"

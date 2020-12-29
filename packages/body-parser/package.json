@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "description": "Body-parser middleware for nanoexpress",
   "type": "module",
-  "main": "body-parser.es.js",
+  "main": "cjs/body-parser.cjs.js",
   "module": "body-parser.es.js",
   "typings": "body-parser.d.ts",
+  "exports": {
+    ".": "./cjs/body-parser.cjs.js",
+    "./module": "./body-parser.es.js",
+    "./cjs/": "./cjs/"
+  },
   "funding": {
     "type": "patreon",
     "url": "https://www.patreon.com/dalisoft"
