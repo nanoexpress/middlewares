@@ -11,6 +11,9 @@
     "./module": "./schemator.es.js",
     "./cjs/": "./cjs/"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "funding": {
     "type": "patreon",
     "url": "https://www.patreon.com/dalisoft"
