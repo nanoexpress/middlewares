@@ -111,7 +111,6 @@ jspm_packages
 #################
 
 .lock-wscript
-yarn.lock
 .yarn-integrity
 
 #################
