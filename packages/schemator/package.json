@@ -1,6 +1,6 @@
 {
   "name": "@nanoexpress/middleware-schemator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Schemator middleware for nanoexpress",
   "type": "module",
   "main": "cjs/schemator.cjs.js",

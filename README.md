@@ -27,13 +27,13 @@ Due of a lot tasks on my full-time job, i cannot add these currently or with-in 
 
 For more info, go-to middleware documentation by click to link
 
-- [body-parser](./packages/body-parser)
-- [static](./packages/static)
-- [graphql](./packages/graphql)
-- [redoc](./packages/redoc)
-- [swagger-ui](./packages/swagger-ui)
-- [schemator](./packages/schemator)
 - [passport](./packages/passport)
+- [body-parser](./packages/body-parser)
+- [graphql](./packages/graphql)
+- [static](./packages/static)
+- [redoc](./packages/redoc)
+- [schemator](./packages/schemator)
+- [swagger-ui](./packages/swagger-ui) **We recommend using `schemator`**
 
 ## License
 
