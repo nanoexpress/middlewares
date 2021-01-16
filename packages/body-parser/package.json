@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Body-parser middleware for nanoexpress",
   "type": "module",
-  "main": "cjs/body-parser.cjs.js",
-  "module": "body-parser.es.js",
+  "main": "body-parser.es.js",
   "typings": "body-parser.d.ts",
   "exports": {
     ".": "./cjs/body-parser.cjs.js",
@@ -35,5 +34,11 @@
   "bugs": {
     "url": "https://github.com/nanoexpress/middlewares/issues"
   },
-  "homepage": "https://github.com/nanoexpress/middlewares#readme"
+  "homepage": "https://github.com/nanoexpress/middlewares#readme",
+  "devDependencies": {
+    "eslint-config-airlight-node": "^1.0.8",
+    "husky": "^4.3.8",
+    "rollup": "^2.36.2",
+    "smartlint": "^1.0.6"
+  }
 }

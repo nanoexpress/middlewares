@@ -1,5 +1,5 @@
 /* eslint-disable no-console, no-process-exit, eslint-comments/disable-enable-pair */
-import bodyParser from '@nanoexpress/middleware-body-parser';
+const bodyParser = require('@nanoexpress/middleware-body-parser');
 
 const middleware = bodyParser({ json: true });
 

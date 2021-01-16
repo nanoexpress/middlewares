@@ -29,7 +29,7 @@ app.use(bodyParser());
 ### CJS Module
 
 ```js
-const bodyParser = require('@nanoexpress/middleware-body-parser/cjs');
+const bodyParser = require('@nanoexpress/middleware-body-parser');
 
 app.use(bodyParser());
 ```
