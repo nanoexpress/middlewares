@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "devDependencies": {
-    "eslint-config-airlight-node": "^1.0.8",
+    "eslint-config-airlight-node": "^1.0.9",
     "husky": "^4.3.8",
     "rollup": "^2.36.2",
     "smartlint": "^1.0.6"
