@@ -5,17 +5,6 @@
 artifacts
 .ansible
 
-**/artifacts
-**/.ansible
-
-# VIM
-.vim/plugged
-.vim/.netrwhist
-.vim/autoload/plug.vim
-
-# nano
-.nano/search_history
-
 
 #################
 #####  Logs #####
@@ -133,31 +122,10 @@ askpass.sh
 ## Build files ##
 #################
 
-cjs
-dist
-build/Release
-functions-build
-
-## Make sure subfolders also does not exist
-**/dist
-**/build/Release
-**/functions-build
+packages/**/cjs/**
 
 ## Except cjs/package.json
-!**/cjs/package.json
-
-## Bundle files
-## Build files for
-## Gatsby, CRA, etc
-public/bundle*
-public/dist*
-public/assets*
-
-## Assets files
-## Build files for
-## some frameworks
-assets/js/bundle*
-assets/css/bundle*
+!packages/**/cjs/package.json
 
 ## Minified CSS files
 *.min.css
