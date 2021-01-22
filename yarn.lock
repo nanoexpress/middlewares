@@ -3790,10 +3790,10 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-getdirname@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/getdirname/-/getdirname-0.1.2.tgz#c197e402c9270ec1be5fd66adbc2e4aef59ef3e8"
-  integrity sha512-R4f9IjMjSdBwY2AKsgXf9hanT47gIxkCIlBffKBQn4RtuK4qIqWc8KiC3N0/chzugoRABA33tzYvohvRx8EsTg==
+getdirname@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/getdirname/-/getdirname-0.1.3.tgz#d32c96b99a6bb983812e4b7fc03059b51e5e3f2c"
+  integrity sha512-NDP/pG/F+CgFaspmd8tYL5+TSNhuve16vRFkUUdJ9d0briVnWBNOVgWpOuF9RuN/ZgOksaobdeV3cH6h58sZYg==
 
 getpass@^0.1.1:
   version "0.1.7"
