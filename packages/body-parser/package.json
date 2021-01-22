@@ -33,7 +33,7 @@
   "devDependencies": {
     "eslint-config-airlight-node": "^1.0.9",
     "husky": "^4.3.8",
-    "rollup": "^2.36.2",
+    "rollup": "^2.38.0",
     "smartlint": "^1.0.6"
   }
 }
