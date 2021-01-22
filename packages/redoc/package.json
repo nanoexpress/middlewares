@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "description": "ReDOC middleware for nanoexpress",
   "type": "module",
-  "main": "cjs/redoc.cjs.js",
-  "module": "redoc.es.js",
+  "main": "redoc.es.js",
   "typings": "redoc.d.ts",
-  "exports": {
-    ".": "./cjs/redoc.cjs.js",
-    "./module": "./redoc.es.js",
-    "./cjs/": "./cjs/"
-  },
   "publishConfig": {
     "access": "public"
   },

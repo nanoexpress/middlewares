@@ -1,0 +1,4 @@
+{
+  "type": "commonjs",
+  "main": "redoc.cjs.js"
+}

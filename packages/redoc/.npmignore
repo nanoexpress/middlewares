@@ -1,0 +1,6 @@
+docs
+examples
+
+*.test.js
+.gitignore
+.gitattributes
