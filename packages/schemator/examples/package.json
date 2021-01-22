@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "main": "simple-doc.js",
+  "dependencies": {
+    "nanoexpress": "^2.4.7"
+  }
+}

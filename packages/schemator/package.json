@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "description": "Schemator middleware for nanoexpress",
   "type": "module",
-  "main": "cjs/schemator.cjs.js",
-  "module": "schemator.es.js",
+  "main": "schemator.es.js",
   "typings": "schemator.d.ts",
-  "exports": {
-    ".": "./cjs/schemator.cjs.js",
-    "./module": "./schemator.es.js",
-    "./cjs/": "./cjs/"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -40,9 +34,9 @@
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
     "ajv": "^6.12.2",
-    "fast-json-stringify": "^2.2.1",
-    "getdirname": "^0.1.0",
+    "fast-json-stringify": "^2.4.1",
+    "getdirname": "^0.1.2",
     "js-yaml": "^3.14.0",
-    "swagger-ui-dist": "^3.28.0"
+    "swagger-ui-dist": "^3.40.0"
   }
 }

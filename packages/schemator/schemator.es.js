@@ -1,6 +1,6 @@
 import getdirname from 'getdirname';
+import { expose, load, render } from './methods/index.js';
 import importize from './utils/importize.js';
-import { load, expose, render } from './methods/index.js';
 
 /**
  * Initialized Schemator instance
