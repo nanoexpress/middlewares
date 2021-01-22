@@ -3,13 +3,7 @@
   "version": "1.0.0",
   "description": "PassportJS middleware wrapper for nanoexpress",
   "type": "module",
-  "main": "cjs/passport.cjs.js",
-  "module": "passport.es.js",
-  "exports": {
-    ".": "./cjs/passport.cjs.js",
-    "./module": "./passport.es.js",
-    "./cjs/": "./cjs/"
-  },
+  "main": "passport.es.js",
   "publishConfig": {
     "access": "public"
   },
