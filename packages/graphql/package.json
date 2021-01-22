@@ -1,16 +1,10 @@
 {
   "name": "@nanoexpress/middleware-graphql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GraphQL middleware for nanoexpress",
   "type": "module",
-  "main": "cjs/graphql.cjs.js",
-  "module": "graphql.es.js",
+  "main": "graphql.es.js",
   "typings": "graphql.d.ts",
-  "exports": {
-    ".": "./cjs/graphql.cjs.js",
-    "./module": "./graphql.es.js",
-    "./cjs/": "./cjs/"
-  },
   "publishConfig": {
     "access": "public"
   },
