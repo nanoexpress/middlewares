@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "description": "Static file serve middleware for nanoexpress",
   "type": "module",
-  "main": "cjs/static.cjs.js",
-  "module": "static.es.js",
+  "main": "static.es.js",
   "typings": "static.d.ts",
-  "exports": {
-    ".": "./cjs/static.cjs.js",
-    "./module": "./static.es.js",
-    "./cjs/": "./cjs/"
-  },
   "publishConfig": {
     "access": "public"
   },
