@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "description": "Swagger UI Frontend middleware",
   "type": "module",
-  "main": "cjs/swagger-ui.cjs.js",
-  "module": "swagger-ui.es.js",
+  "main": "swagger-ui.es.js",
   "typings": "swagger-ui.d.ts",
-  "exports": {
-    ".": "./cjs/swagger-ui.cjs.js",
-    "./module": "./swagger-ui.es.js",
-    "./cjs/": "./cjs/"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -38,6 +32,6 @@
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
-    "swagger-ui-dist": "^3.28.0"
+    "swagger-ui-dist": "^3.40.0"
   }
 }
