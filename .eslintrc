@@ -5,6 +5,10 @@
     "extraFileExtensions": [".cjs"]
   },
   "rules": {
+    "complexity": "off",
+    "indent": "off",
+    "max-lines-per-function": "off",
+    "max-statements-per-function": "off",
     "no-param-reassign": "off",
     "node/no-unsupported-features/es-syntax": [
       "off",

@@ -1,0 +1,23 @@
+ls:
+  packages:
+    .dir: kebab-case
+    .ts: kebab-case
+    .tsx: kebab-case
+    .js: kebab-case
+    .es.js: kebab-case | pointcase
+    .cjs.js: kebab-case | pointcase
+    .d.ts: kebab-case
+    .html: kebab-case
+    .scss: kebab-case
+    .spec.ts: kebab-case | pointcase
+
+ignore:
+  - .git
+  - .bin
+  - packages/body-parser/node_modules
+  - packages/graphql/node_modules
+  - packages/password/node_modules
+  - packages/redoc/node_modules
+  - packages/schemator/node_modules
+  - packages/static/node_modules
+  - packages/swagger-ui/node_modules
