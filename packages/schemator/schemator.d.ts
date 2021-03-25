@@ -11,6 +11,7 @@ interface ISchemator {
 }
 
 declare function schemator(
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   options: { swaggerPath: string } | { swaggerRAW: object }
 ): ISchemator;
 

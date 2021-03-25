@@ -13,7 +13,7 @@ import importize from './utils/importize.js';
  * @example
  * const schematorInstance = schemator({ swaggerPath: './swagger.yml' });
  */
-export default function Schemator(config) {
+export default function schemator(config) {
   const instanceDirectory = getdirname();
   const swaggerObject = importize(
     {

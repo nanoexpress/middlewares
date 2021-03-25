@@ -32,7 +32,8 @@ export default function load(
   swaggerObject,
   config,
   ajvConfig = {
-    removeAdditional: 'all'
+    removeAdditional: 'all',
+    allErrors: true
   }
 ) {
   let ajv;
@@ -54,7 +55,8 @@ export default function load(
 
   if (requestBody || parameters) {
     if (requestBody) {
-      ajv = Ajv(ajvConfig);
+      // eslint-disable-next-line new-cap
+      ajv = Ajv.default ? new Ajv.default(ajvConfig) : new Ajv(ajvConfig);
 
       prepareBodyValidator = schemaPrepare(requestBody.content, (schema) =>
         ajv.compile(schema)
