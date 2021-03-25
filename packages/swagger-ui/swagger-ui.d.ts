@@ -1,9 +1,9 @@
-interface SwaggerUIOptions {
+interface ISwaggerUIOptions {
   title: string;
   path: string;
   url?: string;
 }
 
-declare function swaggerUi<T>(options?: SwaggerUIOptions): T | Promise<T>;
+declare function swaggerUi<T>(options?: ISwaggerUIOptions): T | Promise<T>;
 
 export = swaggerUi;
