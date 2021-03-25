@@ -1,3 +1,5 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable max-lines */
 const mimes = {
   '3gp': 'video/3gpp',
   a: 'application/octet-stream',
@@ -170,6 +172,7 @@ const mimes = {
 
 const getMime = (path) => {
   const i = path.lastIndexOf('.');
+  // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
   return mimes[path.substr(i + 1).toLowerCase()];
 };
 

@@ -17,6 +17,7 @@ export default function staticMiddleware(path, config) {
       url += config.index;
     }
 
+    // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
     const filePath = path + url;
 
     const stat = await fs.stat(filePath).catch(() => null);

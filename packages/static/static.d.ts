@@ -1,4 +1,4 @@
-interface StaticServeOptions {
+interface IStaticServeOptions {
   mode: 'cached' | 'live';
   index: string;
   forcePretty: boolean;
@@ -9,7 +9,7 @@ interface StaticServeOptions {
 
 declare function staticServe<T>(
   path: string,
-  options?: StaticServeOptions
+  options?: IStaticServeOptions
 ): T | Promise<T>;
 
 export = staticServe;
