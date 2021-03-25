@@ -27,6 +27,7 @@ export default function bodyParser(config = {}) {
       const contentType = headers['content-type'];
       if (contentType) {
         if (config.json !== false && contentType.indexOf('/json') !== -1) {
+          // eslint-disable-next-line max-depth
           if (config.experimentalJsonParse && req.fastBodyParse !== undefined) {
             req.body = req.fastBodyParse(body);
           } else {

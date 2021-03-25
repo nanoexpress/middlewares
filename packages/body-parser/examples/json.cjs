@@ -4,7 +4,7 @@ const bodyParser = require('@nanoexpress/middleware-body-parser');
 
 const middleware = bodyParser({ json: true });
 
-const HttpRequest = {
+const httpRequest = {
   body: JSON.stringify({ foo: 'bar' }),
   headers: {
     'content-type': 'application/json'
@@ -12,9 +12,9 @@ const HttpRequest = {
 };
 
 (async () => {
-  await middleware(HttpRequest);
+  await middleware(httpRequest);
 
-  if (HttpRequest.body.foo === 'bar') {
+  if (httpRequest.body.foo === 'bar') {
     console.log('Parse successfully handled');
     process.exit(0);
   } else {
