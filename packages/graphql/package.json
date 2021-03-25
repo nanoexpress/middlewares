@@ -31,6 +31,6 @@
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
-    "graphql": "^15.0.0"
+    "graphql": "^15.5.0"
   }
 }
