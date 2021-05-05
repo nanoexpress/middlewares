@@ -1,7 +1,9 @@
 import Ajv from 'ajv';
+import addFormats from 'ajv-formats';
 import fastJsonStringify from 'fast-json-stringify';
 import getdirname from 'getdirname';
 import importize from '../utils/importize.js';
+import omitUnsupportedKeywords from '../utils/omit-unsupported-keywords.js';
 import {
   flatObjects,
   schemaPrepare,
@@ -57,15 +59,18 @@ export default function load(
     if (requestBody) {
       // eslint-disable-next-line new-cap
       ajv = Ajv.default ? new Ajv.default(ajvConfig) : new Ajv(ajvConfig);
+      addFormats(ajv);
 
       prepareBodyValidator = schemaPrepare(requestBody.content, (schema) =>
-        ajv.compile(schema)
+        ajv.compile(omitUnsupportedKeywords(schema))
       );
     }
 
     if (parameters && parameters.length > 0) {
       if (!ajv) {
-        ajv = Ajv(ajvConfig);
+        // eslint-disable-next-line new-cap
+        ajv = Ajv.default ? new Ajv.default(ajvConfig) : new Ajv(ajvConfig);
+        addFormats(ajv);
       }
       prepareQueriesValidator = validatorPrepare(
         ajv,

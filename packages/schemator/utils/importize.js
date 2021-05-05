@@ -10,7 +10,7 @@ const importize = ({ path: _path, raw }, directory) => {
     const readBuffer = fs.readFileSync(resolveFile, 'utf-8');
 
     if (_path.endsWith('.yaml') || _path.endsWith('.yml')) {
-      return jsYaml.safeLoad(readBuffer);
+      return jsYaml.load(readBuffer);
     }
     if (_path.endsWith('.json')) {
       return JSON.parse(readBuffer);
