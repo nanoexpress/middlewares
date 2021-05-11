@@ -30,5 +30,8 @@
     "url": "https://github.com/nanoexpress/middlewares/issues"
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
-  "devDependencies": {}
+  "devDependencies": {},
+  "dependencies": {
+    "fast-decode-uri-component": "^1.0.1"
+  }
 }

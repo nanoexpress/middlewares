@@ -5,10 +5,6 @@ import { parse } from 'querystring';
  * @param {object} options Options of parser
  * @param {Boolean=} options.json Parse JSON data with
  * content-type of `application/json` or `text/json` into JS Object?
- *
- * @param {Boolean=} options.experimentalJsonParse Experimental JSON parser,
- * better performance, but not stable yet
- *
  * @param {Boolean=} options.urlEncoded Parse JSON data with content-type of
  * `x-www-form-urlencoded` into JS Object?
  *
@@ -28,7 +24,7 @@ export default function bodyParser(config = {}) {
       if (contentType) {
         if (config.json !== false && contentType.indexOf('/json') !== -1) {
           // eslint-disable-next-line max-depth
-          if (config.experimentalJsonParse && req.fastBodyParse !== undefined) {
+          if (req.fastBodyParse !== undefined) {
             req.body = req.fastBodyParse(body);
           } else {
             req.body = JSON.parse(body);
@@ -37,7 +33,7 @@ export default function bodyParser(config = {}) {
           config.urlEncoded !== false &&
           contentType.indexOf('/x-www-form-urlencoded') !== -1
         ) {
-          req.body = parse(body);
+          req.body = parse(body.toString());
         }
       }
     }

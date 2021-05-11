@@ -1,6 +1,5 @@
 interface IBodyParserOptions {
   json: boolean;
-  experimentalJsonParse: boolean;
   urlEncoded: boolean;
 }
 
