@@ -6,8 +6,7 @@ interface ISchemator {
   load(
     options: (LoadOptions & { path: string }) | (LoadOptions & { raw: object })
   ): PromiseLike<any>;
-  render(options: { title: string; exposePath: string }): PromiseLike<any>;
-  expose(): PromiseLike<any>;
+  define<Type>(app: Type): Type;
 }
 
 declare function schemator(

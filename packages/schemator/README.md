@@ -23,6 +23,8 @@ yarn add @nanoexpress/middleware-schemator
 ```js
 const schematorInstance = schemator({ swaggerPath: './swagger.yml' });
 
+app.define(schematorInstance.define);
+
 /// auth/index.js
 app.get(
   '/auth',
@@ -43,6 +45,8 @@ app.get(
 ```js
 const schematorInstance = schemator({ swaggerPath: './swagger.json' });
 
+app.define(schematorInstance.define);
+
 /// auth/index.js
 app.get(
   '/auth',
@@ -62,6 +66,8 @@ app.get(
 
 ```js
 const schematorInstance = schemator({ swaggerRAW: {} });
+
+app.define(schematorInstance.define);
 
 /// auth/index.js
 app.get(
@@ -97,7 +103,7 @@ import schemator from '@nanoexpress/middleware-schemator';
 
 const schematorInstance = schemator({ swaggerPath: './swagger.yml' });
 
-app.use('/swagger.json', schematorInstance.expose());
+app.define(schematorInstance.define);
 
 app.get(
   '/auth',
@@ -120,7 +126,7 @@ const bodyParser = require('@nanoexpress/middleware-schemator/cjs');
 
 const schematorInstance = schemator({ swaggerPath: './swagger.yml' });
 
-app.use('/swagger.json', schematorInstance.expose());
+app.define(schematorInstance.define);
 
 app.get(
   '/auth',

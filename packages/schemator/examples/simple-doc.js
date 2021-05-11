@@ -2,9 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies, node/no-extraneous-import */
 import bodyParser from '@nanoexpress/middleware-body-parser';
 import schemator from '@nanoexpress/middleware-schemator';
-import staticServe from '@nanoexpress/middleware-static-serve';
 import nanoexpress from 'nanoexpress';
-import swaggerUiDist from 'swagger-ui-dist';
 import mockup from './mockup.js';
 
 const app = nanoexpress({
@@ -12,13 +10,10 @@ const app = nanoexpress({
 });
 
 const schematorInstance = schemator({ swaggerPath: './swagger.json' });
+app.define(schematorInstance.define);
 
 app.use(mockup);
-app.use(bodyParser());
-
-app.get('/swagger-ui-dist/:file', staticServe(swaggerUiDist.absolutePath()));
-app.get('/swagger.json', schematorInstance.expose());
-app.get('/swagger', schematorInstance.render({ exposePath: '/swagger.json' }));
+app.use(bodyParser({ experimentalJsonParse: true }));
 
 app.get(
   '/',
@@ -28,9 +23,14 @@ app.get(
 );
 app.post(
   '/',
+  {
+    schema: {
+      body: false
+    }
+  },
   // Here any body-parser, form-data logic (all preprocess middlewares)
   schematorInstance.load({ method: 'post', attach: '/', path: './docs.yml' }),
-  async () => ({ status: 'success' })
+  async (req) => ({ status: 'success', data: req.body })
 );
 
 app.listen(4000);

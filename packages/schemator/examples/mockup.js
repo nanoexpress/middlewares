@@ -6,5 +6,5 @@ export default async (req) => {
   });
 
   // TODO: Mock data
-  req.body = '{"email":"foo@bar.baz"}';
+  req.body = Buffer.from('{"email":"foo@bar.baz"}');
 };

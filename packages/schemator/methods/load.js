@@ -1,7 +1,8 @@
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
-import fastJsonStringify from 'fast-json-stringify';
+import compileJsonStringify from 'compile-json-stringify';
 import getdirname from 'getdirname';
+import turboJsonParse from 'turbo-json-parse';
 import importize from '../utils/importize.js';
 import omitUnsupportedKeywords from '../utils/omit-unsupported-keywords.js';
 import {
@@ -11,6 +12,7 @@ import {
 } from '../utils/schema-prepare.js';
 
 /**
+ * @name load
  * Schemator loading router method
  * @param {object} swaggerObject Internal Swagger instance
  * @param {object} config Schemator route load configuration
@@ -51,9 +53,8 @@ export default function load(
 
   Object.assign(swaggerObject.paths, swaggerRouteObject.path);
 
-  const { responses, requestBody, parameters } = swaggerRouteObject.path[
-    config.attach
-  ][config.method];
+  const { responses, requestBody, parameters } =
+    swaggerRouteObject.path[config.attach][config.method];
 
   if (requestBody || parameters) {
     if (requestBody) {
@@ -94,33 +95,48 @@ export default function load(
     }
   }
 
-  const prepareSerialize =
+  const turboParser =
+    requestBody &&
+    requestBody.content &&
+    requestBody.content['application/json'] &&
+    turboJsonParse(requestBody.content['application/json'].schema, {
+      defaults: false,
+      fullMatch: true,
+      buffer: true
+    });
+  const compiledJson =
     responses &&
     Object.entries(responses)
       .map(([code, { content }]) => ({
-        [code]: schemaPrepare(content, fastJsonStringify)
+        [code]: schemaPrepare(content, compileJsonStringify)
       }))
       .reduce(flatObjects, undefined);
+
+  if (turboParser && !this._deserialized) {
+    this._route._middlewares.unshift(async (req) => {
+      req.fastBodyParse = turboParser;
+    });
+    this._deserialized = true;
+  }
+  if (compiledJson && !this._serialized) {
+    this._route._middlewares.push(async (req, res) => {
+      const bodyContentType = req.headers['content-type'] || 'application/json';
+      const responseContentType = req.headers.accept || bodyContentType;
+
+      const serializeTypes =
+        compiledJson[res.rawStatusCode] || compiledJson[200];
+      const serializer = serializeTypes[responseContentType];
+
+      res.serialize = serializer;
+      res.fastJson = serializer;
+    });
+    this._serialized = true;
+  }
 
   // eslint-disable-next-line consistent-return
   return async (req, res) => {
     const bodyContentType = req.headers['content-type'] || 'application/json';
     const responseContentType = req.headers.accept || bodyContentType;
-
-    if (prepareSerialize) {
-      const serializeTypes =
-        prepareSerialize[res.rawStatusCode] || prepareSerialize[200];
-      const serializer = serializeTypes[responseContentType];
-
-      res.writeHeader('Content-Type', responseContentType);
-      res.writeStatus(res.statusCode);
-
-      // PRO-Slim version polyfill
-      res.serialize = serializer;
-
-      // PRO version polyfill
-      res.fastJson = serializer;
-    }
 
     let errors;
     if (prepareBodyValidator && req.body) {
@@ -164,6 +180,11 @@ export default function load(
         }
         errors.cookies = prepareCookiesValidator.errors;
       }
+    }
+
+    if (compileJsonStringify) {
+      res.writeHeader('Content-Type', responseContentType);
+      res.writeStatus(res.statusCode);
     }
 
     if (errors) {
