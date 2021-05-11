@@ -21,11 +21,11 @@
     "husky": "^6.0.0",
     "husky-config-airlight": "^1.0.3",
     "lerna": "^4.0.0",
-    "lint-staged": "^10.5.4",
+    "lint-staged": "^11.0.0",
     "lint-staged-config-airlight": "^1.0.8",
     "prettier-config-airlight": "^1.0.0",
     "rollup": "^2.47.0",
-    "smartlint": "^1.1.8",
+    "smartlint": "^1.1.9",
     "typescript": "4.2.4"
   }
 }
