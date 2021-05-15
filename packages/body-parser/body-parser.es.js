@@ -9,7 +9,6 @@ import { parse } from 'querystring';
  * `x-www-form-urlencoded` into JS Object?
  *
  * @default options.json true `JSON-parsing enabled by default`
- * @default options.experimentalJsonParse false `Experimental JSON-parsing disabled by default`
  * @default options.urlEncoded true `Form Data-parsing enabled by default`
  *
  * @example
@@ -25,15 +24,15 @@ export default function bodyParser(config = {}) {
         if (config.json !== false && contentType.indexOf('/json') !== -1) {
           // eslint-disable-next-line max-depth
           if (req.fastBodyParse !== undefined) {
-            req.body = req.fastBodyParse(body);
+            req.body = req.fastBodyParse(req.body);
           } else {
-            req.body = JSON.parse(body);
+            req.body = JSON.parse(req.body.toString());
           }
         } else if (
           config.urlEncoded !== false &&
           contentType.indexOf('/x-www-form-urlencoded') !== -1
         ) {
-          req.body = parse(body.toString());
+          req.body = parse(req.body.toString());
         }
       }
     }
