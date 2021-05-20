@@ -3724,11 +3724,6 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky-config-airlight@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/husky-config-airlight/-/husky-config-airlight-1.0.3.tgz#aac29aed1f183aff5b29a26bb8bd9a7774154bb4"
-  integrity sha512-p2q1LPGsXvtQvLxmzoFGFr4ZYH89lxItn1mjpM536YYokNeHmJ5wUcHR4pz4YISHw/5RVTZ0vssSCR/Nj9qhQg==
-
 husky@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/husky/-/husky-6.0.0.tgz#810f11869adf51604c32ea577edbc377d7f9319e"
@@ -7051,6 +7046,10 @@ typescript@4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
   integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
+
+"uWebSockets.js@https://github.com/uNetworking/uWebSockets.js/archive/v19.2.0.tar.gz":
+  version "19.2.0"
+  resolved "https://github.com/uNetworking/uWebSockets.js/archive/v19.2.0.tar.gz#4870152d94b9fd3fb7d2736f0d54782df2b61b6c"
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"

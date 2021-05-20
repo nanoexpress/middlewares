@@ -19,7 +19,6 @@
     "@commitlint/config-lerna-scopes": "^12.1.4",
     "eslint-config-airlight-node": "^1.1.8",
     "husky": "^6.0.0",
-    "husky-config-airlight": "^1.0.3",
     "lerna": "^4.0.0",
     "lint-staged": "^11.0.0",
     "lint-staged-config-airlight": "^1.0.8",

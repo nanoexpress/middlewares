@@ -15,6 +15,7 @@ ignore:
   - .git
   - .bin
   - packages/body-parser/node_modules
+  - packages/file-upload/node_modules
   - packages/graphql/node_modules
   - packages/password/node_modules
   - packages/redoc/node_modules
