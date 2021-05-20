@@ -3,7 +3,6 @@
 import bodyParser from '@nanoexpress/middleware-body-parser';
 import schemator from '@nanoexpress/middleware-schemator';
 import nanoexpress from 'nanoexpress';
-import mockup from './mockup.js';
 
 const app = nanoexpress({
   jsonSpaces: 2
@@ -12,8 +11,7 @@ const app = nanoexpress({
 const schematorInstance = schemator({ swaggerPath: './swagger.json' });
 app.define(schematorInstance.define);
 
-app.use(mockup);
-app.use(bodyParser({ experimentalJsonParse: true }));
+app.use(bodyParser());
 
 app.get(
   '/',
@@ -23,11 +21,6 @@ app.get(
 );
 app.post(
   '/',
-  {
-    schema: {
-      body: false
-    }
-  },
   // Here any body-parser, form-data logic (all preprocess middlewares)
   schematorInstance.load({ method: 'post', attach: '/', path: './docs.yml' }),
   async (req) => ({ status: 'success', data: req.body })

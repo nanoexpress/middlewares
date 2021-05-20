@@ -1,8 +1,7 @@
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
-import compileJsonStringify from 'compile-json-stringify';
+import fastJsonStringify from 'fast-json-stringify';
 import getdirname from 'getdirname';
-import turboJsonParse from 'turbo-json-parse';
 import importize from '../utils/importize.js';
 import omitUnsupportedKeywords from '../utils/omit-unsupported-keywords.js';
 import {
@@ -20,7 +19,8 @@ import {
  * @param {string} config.attach Your router path (with Swagger path format)
  * @param {string} config.path Route Swagger schema file path
  * @param {string} config.raw Route Swagger schema RAW Object
- * @param {object} ajvConfig
+ * @param {object} ajvConfig Ajv config
+ * @param {object} enableSmartFunctions Enable smart functions such as serializers and parsers
  * @memberof Schemator
  *
  * @default ajvConfig.removeAdditional all `Remove Ajv addin. props`
@@ -38,7 +38,8 @@ export default function load(
   ajvConfig = {
     removeAdditional: 'all',
     allErrors: true
-  }
+  },
+  enableSmartFunctions = true
 ) {
   let ajv;
 
@@ -95,30 +96,16 @@ export default function load(
     }
   }
 
-  const turboParser =
-    requestBody &&
-    requestBody.content &&
-    requestBody.content['application/json'] &&
-    turboJsonParse(requestBody.content['application/json'].schema, {
-      defaults: false,
-      fullMatch: true,
-      buffer: true
-    });
   const compiledJson =
+    enableSmartFunctions &&
     responses &&
     Object.entries(responses)
       .map(([code, { content }]) => ({
-        [code]: schemaPrepare(content, compileJsonStringify)
+        [code]: schemaPrepare(content, fastJsonStringify)
       }))
       .reduce(flatObjects, undefined);
 
-  if (turboParser && !this._deserialized) {
-    this._route._middlewares.unshift(async (req) => {
-      req.fastBodyParse = turboParser;
-    });
-    this._deserialized = true;
-  }
-  if (compiledJson && !this._serialized) {
+  if (enableSmartFunctions && compiledJson && !this._serialized) {
     this._route._middlewares.push(async (req, res) => {
       const bodyContentType = req.headers['content-type'] || 'application/json';
       const responseContentType = req.headers.accept || bodyContentType;
@@ -127,20 +114,17 @@ export default function load(
         compiledJson[res.rawStatusCode] || compiledJson[200];
       const serializer = serializeTypes[responseContentType];
 
-      res.serialize = serializer;
-      res.fastJson = serializer;
+      res.serializer = serializer;
     });
     this._serialized = true;
   }
 
   // eslint-disable-next-line consistent-return
   return async (req, res) => {
-    const bodyContentType = req.headers['content-type'] || 'application/json';
-    const responseContentType = req.headers.accept || bodyContentType;
-
     let errors;
+
     if (prepareBodyValidator && req.body) {
-      const bodyValidator = prepareBodyValidator[bodyContentType];
+      const bodyValidator = prepareBodyValidator[req.headers['content-type']];
 
       if (bodyValidator) {
         if (!bodyValidator(req.body)) {
@@ -182,8 +166,8 @@ export default function load(
       }
     }
 
-    if (compileJsonStringify) {
-      res.writeHeader('Content-Type', responseContentType);
+    if (fastJsonStringify && compiledJson) {
+      res.writeHeader('Content-Type', req.headers.accept);
       res.writeStatus(res.statusCode);
     }
 

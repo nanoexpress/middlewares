@@ -2,6 +2,6 @@
   "type": "module",
   "main": "simple-doc.js",
   "dependencies": {
-    "nanoexpress": "^2.4.7"
+    "nanoexpress": "^3.0.3"
   }
 }

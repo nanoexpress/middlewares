@@ -34,13 +34,12 @@
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
     "@nanoexpress/middleware-static-serve": "^1.0.2",
-    "ajv": "^8.3.0",
+    "ajv": "^8.4.0",
     "ajv-formats": "^2.1.0",
-    "compile-json-stringify": "^0.1.2",
+    "fast-json-stringify": "^2.7.4",
     "getdirname": "^0.1.4",
     "js-yaml": "^4.1.0",
     "lodash.omit": "^4.5.0",
-    "swagger-ui-dist": "^3.48.0",
-    "turbo-json-parse": "https://github.com/dalisoft/turbo-json-parse/releases/download/v2.4.0/turbo-json-parse-2.4.0.tgz"
+    "swagger-ui-dist": "^3.49.0"
   }
 }
