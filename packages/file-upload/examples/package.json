@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "main": "file-upload.js",
+  "dependencies": {
+    "nanoexpress": "^4.0.0"
+  }
+}
