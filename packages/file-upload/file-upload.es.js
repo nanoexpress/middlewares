@@ -34,12 +34,12 @@ export default function fileUpload(config = { limit: '256mb' }) {
       contentType.indexOf('image/') !== 0
     ) {
       throw new Error(
-        '@nanoexpress/file-upload [Error]: Invalid upload format, please check your request'
+        '@nanoexpress/middleware-file-upload [Error]: Invalid upload format, please check your request'
       );
     }
     if (+contentLength > FILE_SIZE_LIMIT) {
       throw new Error(
-        '@nanoexpress/file-upload [Error]: File-limit exceeded, please change limit on server or down file-size from client'
+        '@nanoexpress/middleware-file-upload [Error]: File-limit exceeded, please change limit on server or down file-size from client'
       );
     }
     if (!req.stream) {
