@@ -38,7 +38,7 @@ app.use(fileUpload());
 
 | Options name    | Default | Required | Description                            |
 | --------------- | ------- | -------- | -------------------------------------- |
-| `options.limit` | 512 Mb  | Yes      | Limit of total uploading files or data |
+| `options.limit` | 256 Mb  | Yes      | Limit of total uploading files or data |
 
 ## License
 

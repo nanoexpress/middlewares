@@ -7,11 +7,11 @@ import streamParser from './utils/stream-parser.js';
  * Handles file-upload process
  * @param {object} options Options of middleware
  * @param {String=} options.limit Limit of uploading file or data
- * @default options.limit 512 MB `512 Mb total limit of data by default`
+ * @default options.limit 256 MB `256 Mb total limit of data by default`
  * @example
  * app.use(fileUpload())
  */
-export default function fileUpload(config = { limit: '512mb' }) {
+export default function fileUpload(config = { limit: '256mb' }) {
   const FILE_SIZE_LIMIT = sizeConvert(config.limit);
   return async function fileUploadHandler(req, res) {
     const contentType =
