@@ -1,9 +1,11 @@
+import { RequestListener } from 'http';
+
 interface IReDocOptions {
   title: string;
   path: string;
   url?: string;
 }
 
-declare function redoc<T>(options?: IReDocOptions): T | Promise<T>;
+declare function redoc(options?: IReDocOptions): Promise<RequestListener>;
 
 export = redoc;
