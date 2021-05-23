@@ -22,6 +22,7 @@ For more info, go-to middleware documentation by click to link
 - [passport](./packages/passport)
 - [body-parser](./packages/body-parser)
 - [file-upload](./packages/file-upload)
+- [formidable](./packages/formidable)
 - [graphql](./packages/graphql)
 - [static](./packages/static)
 - [redoc](./packages/redoc)
