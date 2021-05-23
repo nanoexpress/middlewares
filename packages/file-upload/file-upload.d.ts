@@ -1,7 +1,11 @@
+import { RequestListener } from 'http';
+
 interface IFileUploadOptions {
   limit: string;
 }
 
-declare function fileUpload<T>(options?: IFileUploadOptions): T | Promise<T>;
+declare function fileUpload(
+  options?: IFileUploadOptions
+): Promise<RequestListener>;
 
 export = fileUpload;
