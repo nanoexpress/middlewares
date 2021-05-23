@@ -14,6 +14,8 @@ const external = [
 
 export default [
   'body-parser',
+  'file-upload',
+  'formidable',
   'static',
   'graphql',
   'redoc',

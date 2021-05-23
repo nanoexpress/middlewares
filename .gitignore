@@ -123,6 +123,7 @@ askpass.sh
 #################
 
 packages/**/cjs/**
+packages/**/examples/yarn.lock
 
 ## Except cjs/package.json
 !packages/**/cjs/package.json
