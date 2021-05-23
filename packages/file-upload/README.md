@@ -2,7 +2,7 @@
 
 file-upload middleware for nanoexpress
 
-> You can use express `file-upload` middleware instead of this middleware
+> You can use **express.js** `file-upload` middleware instead of this middleware
 
 ## Installation
 
