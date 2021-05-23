@@ -1,9 +1,13 @@
+import { RequestListener } from 'http';
+
 interface ISwaggerUIOptions {
   title: string;
   path: string;
   url?: string;
 }
 
-declare function swaggerUi<T>(options?: ISwaggerUIOptions): T | Promise<T>;
+declare function swaggerUi(
+  options?: ISwaggerUIOptions
+): Promise<RequestListener>;
 
 export = swaggerUi;
