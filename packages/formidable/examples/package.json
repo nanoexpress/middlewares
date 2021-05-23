@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "main": "formidable.js",
+  "dependencies": {
+    "nanoexpress": "^4.0.0"
+  }
+}

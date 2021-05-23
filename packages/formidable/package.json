@@ -1,0 +1,37 @@
+{
+  "name": "@nanoexpress/middleware-formidable",
+  "version": "1.0.0",
+  "description": "Formidable middleware for nanoexpress",
+  "type": "module",
+  "main": "formidable.es.js",
+  "typings": "formidable.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/dalisoft"
+  },
+  "engines": {
+    "node": ">=12.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoexpress/middlewares.git"
+  },
+  "keywords": [
+    "nanoexpress",
+    "middlewares",
+    "formidable"
+  ],
+  "author": "dalisoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanoexpress/middlewares/issues"
+  },
+  "homepage": "https://github.com/nanoexpress/middlewares#readme",
+  "dependencies": {
+    "@types/formidable": "^1.2.2",
+    "formidable": "^2.0.0-canary.20200504.1"
+  }
+}
