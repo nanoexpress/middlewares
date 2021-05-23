@@ -3,7 +3,8 @@ import expressSession from 'express-session';
 import nanoexpress from 'nanoexpress';
 import passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
-import passportInitialize from '../passport.es.js';
+// eslint-disable-next-line import/extensions, node/no-unpublished-import
+import passportInitialize from '..';
 
 const app = nanoexpress();
 
