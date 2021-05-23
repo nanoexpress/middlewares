@@ -1,3 +1,5 @@
+import { RequestListener } from 'http';
+
 interface IStaticServeOptions {
   mode: 'cached' | 'live';
   index: string;
@@ -7,9 +9,9 @@ interface IStaticServeOptions {
   compressed: boolean;
 }
 
-declare function staticServe<T>(
+declare function staticServe(
   path: string,
   options?: IStaticServeOptions
-): T | Promise<T>;
+): Promise<RequestListener>;
 
 export = staticServe;
