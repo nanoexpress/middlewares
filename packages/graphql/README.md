@@ -2,8 +2,6 @@
 
 graphql middleware for nanoexpress
 
-> You can use express `express-graphql` middleware instead of this middleware
-
 ## Installation
 
 ```bash
@@ -14,8 +12,8 @@ yarn add @nanoexpress/middleware-graphql
 
 ## Caveats
 
-- This middleware supports only HTTP bindings, not WebSocket/PubSub/Subscription bindings
-- This package does not provide GraphiQL support yet
+- This middleware provides only HTTP bindings
+- For **subscription** support, please use [graphql-ws](https://github.com/enisdenjo/graphql-ws)
 
 ## Example
 
@@ -26,17 +24,17 @@ See the [examples](./examples) directory
 ### ESM Module
 
 ```js
-import graphql from '@nanoexpress/middleware-body-parser;
+import graphql from '@nanoexpress/middleware-graphql';
 
-app.use('/graphql', graphql(GraphQLSchema));
+app.post('/graphql', graphql(GraphQLSchema));
 ```
 
 ### CJS Module
 
 ```js
-const graphql = require('@nanoexpress/middleware-body-parser/cjs');
+const graphql = require('@nanoexpress/middleware-graphql/cjs');
 
-app.use('/graphql', graphql(GraphQLSchema));
+app.post('/graphql', graphql(GraphQLSchema));
 ```
 
 ## Options

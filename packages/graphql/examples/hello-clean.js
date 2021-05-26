@@ -1,55 +1,40 @@
 /* eslint-disable import/no-unresolved, node/no-missing-import, eslint-comments/disable-enable-pair */
-import nanoexpress from '@nanoexpress/pro-slim'; // Or your choice, you can use nanoexpress
+import bodyParser from '@nanoexpress/middleware-body-parser';
+import graphql from '@nanoexpress/middleware-graphql';
 import graphqlExports from 'graphql';
-import graphql from '../graphql.es.js';
+// eslint-disable-next-line import/extensions
+import { makeBehavior } from 'graphql-ws/lib/use/uWebSockets';
+import nanoexpress from 'nanoexpress';
 
 const app = nanoexpress();
+app.use(bodyParser());
 
 // Construct a schema, using GraphQL schema language
 const schema = graphqlExports.buildSchema(`
   type Query {
     hello: String
   }
+  type Subscription {
+    greetings: String
+  }
 `);
 
-// The root provides a resolver function for each API endpoint
-const root = {
-  hello: () => 'Clean world!'
+// The roots provide resolvers for each GraphQL operation
+const rootQueryMutation = {
+  hello: () => 'Hello World!'
+};
+const rootsSubscription = {
+  subscription: {
+    greetings: async function* sayHiIn5Languages() {
+      // eslint-disable-next-line no-restricted-syntax
+      for (const hi of ['Hi', 'Bonjour', 'Hola', 'Ciao', 'Zdravo']) {
+        yield { greetings: hi };
+      }
+    }
+  }
 };
 
-// Simple implementation for `headers` middleware to work
-// effectively with browsers `Ranges` header
-app.use(async (req) => {
-  req.headers = {};
-  req.forEach((key, value) => {
-    req.headers[key] = value;
-  });
-});
-
-// Simple `req.body` implementation
-app.use(
-  async (req, res) =>
-    new Promise((resolve) => {
-      let body = '';
-
-      if (req.method !== 'POST') {
-        return resolve();
-      }
-
-      res.onAborted(() => {});
-      res.onData((chunk, isLast) => {
-        body += Buffer.from(chunk).toString('utf8');
-
-        if (isLast) {
-          req.body = JSON.parse(body);
-
-          resolve();
-        }
-      });
-      return res;
-    })
-);
-
-app.use('/graphql', graphql(schema, root));
+app.post('/graphql', graphql(schema, rootQueryMutation));
+app.ws('/graphql', makeBehavior({ schema, roots: rootsSubscription }));
 
 app.listen(4000);

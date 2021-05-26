@@ -1,5 +1,6 @@
 import { GraphQLSchema } from 'graphql';
+import { RequestListener } from 'http';
 
-declare function graphql<T>(options?: GraphQLSchema): T;
+declare function graphql(options?: GraphQLSchema): Promise<RequestListener>;
 
 export = graphql;

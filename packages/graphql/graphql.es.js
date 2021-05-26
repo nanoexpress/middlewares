@@ -55,6 +55,6 @@ export default function graphql(schema, root) {
       }
     }
 
-    return undefined;
+    return res;
   };
 }
