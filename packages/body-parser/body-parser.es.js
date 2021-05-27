@@ -1,4 +1,4 @@
-import { parse } from 'querystring';
+import parseFormUrlEncoded from 'fast-query-parse';
 
 /**
  * Parses string to `JSON` JS Object
@@ -32,7 +32,7 @@ export default function bodyParser(config = {}) {
           config.urlEncoded !== false &&
           contentType.indexOf('/x-www-form-urlencoded') !== -1
         ) {
-          req.body = parse(req.body.toString());
+          req.body = parseFormUrlEncoded(req.body.toString());
         }
       }
     }
