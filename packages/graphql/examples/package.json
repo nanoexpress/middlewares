@@ -2,7 +2,7 @@
   "type": "module",
   "dependencies": {
     "@nanoexpress/middleware-body-parser": "^1.2.1",
-    "@nanoexpress/middleware-graphql": "^1.0.2",
+    "@nanoexpress/middleware-graphql": "file:..",
     "graphql": "^15.5.0",
     "graphql-ws": "^4.5.1",
     "nanoexpress": "^5.0.4"

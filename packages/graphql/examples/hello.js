@@ -10,6 +10,6 @@ const app = nanoexpress();
 app.use(bodyParser());
 
 app.post('/graphql', graphql(graphqlSchema));
-app.ws('/graphql', makeBehavior(graphqlSchema));
+app.ws('/graphql', makeBehavior({ schema: graphqlSchema }));
 
 app.listen(4000);

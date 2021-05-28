@@ -1,4 +1,5 @@
 import graphqlExports from 'graphql';
+import { compileQuery } from 'graphql-jit';
 
 /**
  * @param schema - Please see [here](https://graphql.org/graphql-js/type/#graphqlschema)
@@ -12,6 +13,9 @@ import graphqlExports from 'graphql';
  */
 
 export default function graphql(schema, root) {
+  const cache = {};
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  const jitOptions = { customJSONSerializer: true };
   return async function graphqlHandler(req, res) {
     const { headers, body } = req;
 
@@ -19,36 +23,45 @@ export default function graphql(schema, root) {
       const contentType = headers['content-type'];
       res.writeHeader('content-type', 'application/json');
 
-      let graphqlQuery = '';
+      let query;
       let variables;
       let operationName;
 
-      if (typeof body === 'object' && body) {
-        graphqlQuery = body.query || body.mutation;
+      let document;
+      let compiled;
+
+      if (
+        contentType === 'application/graphql' ||
+        contentType === 'text/graphql'
+      ) {
+        query = body;
+      } else {
+        query = body.query || body.mutation;
         variables = body.variables;
         operationName = body.operationName;
-      } else if (typeof body === 'string') {
-        if (
-          contentType === 'application/graphql' ||
-          contentType === 'text/graphql'
-        ) {
-          graphqlQuery = body;
-        } else {
-          return res.end(
-            '{"status":"error","message":"Please, make sure, your provided data are correct"}'
-          );
-        }
+      }
+
+      if (!query) {
+        return res
+          .status(400)
+          .send({ status: 'error', message: 'Invalid query' });
+      }
+
+      compiled = cache[query];
+
+      if (!compiled) {
+        document = graphqlExports.parse(query);
+        cache[query] = compileQuery(
+          schema,
+          document,
+          operationName,
+          jitOptions
+        );
+        compiled = cache[query];
       }
 
       const context = { req, res };
-      const response = await graphqlExports.graphql(
-        schema,
-        graphqlQuery,
-        root,
-        context,
-        variables,
-        operationName
-      );
+      const response = compiled.query(root, context, variables);
 
       if (response) {
         return res.send(response);
