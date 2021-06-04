@@ -1,4 +1,4 @@
 {
   "type": "commonjs",
-  "main": "file-upload.cjs.js"
+  "main": "formidable.cjs.js"
 }
