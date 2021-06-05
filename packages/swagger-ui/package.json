@@ -32,6 +32,6 @@
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
-    "swagger-ui-dist": "^3.49.0"
+    "swagger-ui-dist": "^3.50.0"
   }
 }
