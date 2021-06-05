@@ -3174,10 +3174,10 @@ fast-json-stringify@^1.13.0:
     deepmerge "^4.2.2"
     string-similarity "^4.0.1"
 
-fast-json-stringify@^2.7.5:
-  version "2.7.5"
-  resolved "https://registry.yarnpkg.com/fast-json-stringify/-/fast-json-stringify-2.7.5.tgz#fdd348d204ba8fc81b3ab4bb947d10a50d953e48"
-  integrity sha512-VClYNkPo7tyZr0BMrRWraDMTJwjH6dIaHc/b/BiA4Z2MpxpKZBu45akYVb0dOVwQbF22zUMmhdg1WjrUjzAN2g==
+fast-json-stringify@^2.7.6:
+  version "2.7.6"
+  resolved "https://registry.yarnpkg.com/fast-json-stringify/-/fast-json-stringify-2.7.6.tgz#c7c92f613f90427a809fe66b2d181ee23e0f0749"
+  integrity sha512-ezem8qpAgpad6tXeUhK0aSCS8Fi2vjxTorI9i5M+xrq6UUbTl7/bBTxL1SjRI2zy+qpPkdD4+UblUCQdxRpvIg==
   dependencies:
     ajv "^6.11.0"
     deepmerge "^4.2.2"
@@ -6421,10 +6421,10 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^2.50.2:
-  version "2.50.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.50.2.tgz#640c500c68c698f62efb01857e0ff06fcd18181f"
-  integrity sha512-Ra5JkxSiZPZZFnvE68KWtlrLnZGg5LNaV1n1esq4ch69P7ReeoRVlrTuL/k+L/GJfcowA5An0BEhEq2Hfzwl6w==
+rollup@^2.50.6:
+  version "2.50.6"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.50.6.tgz#24e2211caf9031081656e98a5e5e94d3b5e786e2"
+  integrity sha512-6c5CJPLVgo0iNaZWWliNu1Kl43tjP9LZcp6D/tkf2eLH2a9/WeHxg9vfTFl8QV/2SOyaJX37CEm9XuGM0rviUg==
   optionalDependencies:
     fsevents "~2.3.1"
 
@@ -7014,10 +7014,10 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-swagger-ui-dist@^3.49.0:
-  version "3.49.0"
-  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-3.49.0.tgz#8915df662b74a4dbc9583cd6d3d726c3910e3b33"
-  integrity sha512-R1+eT16XNP1bBLfacISifZAkFJlpwvWsS2vVurF5pbIFZnmCasD/hj+9r/q7urYdQyb0B6v11mDnuYU7rUpfQg==
+swagger-ui-dist@^3.50.0:
+  version "3.50.0"
+  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-3.50.0.tgz#a06ace5820874ff9b337afb91bb08e76fcd12d57"
+  integrity sha512-BklniOBPlvZ6M9oGkhUwOf5HvxhkHBIycXN3ndju8WlLmi1xfMSdOA2AR6pNswlwURzsZUe1rh80aUyjnpD+Zw==
 
 table@^6.0.9:
   version "6.7.1"
