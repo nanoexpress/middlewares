@@ -4,6 +4,7 @@ import Formidable from 'formidable';
  * Formidable plugin
  * @param {object} options Formidable options
  * @param {Function} initialize **Formidable** instance handler
+ * @default {object} options {multiples: true}
  * @example
  * app.use(formidable())
  */
