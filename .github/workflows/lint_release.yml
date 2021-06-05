@@ -38,9 +38,6 @@ jobs:
       - name: Install
         run: yarn --frozen-lockfile
 
-      - name: semantic-release Prepare
-        run: yarn add semantic-release semantic-release-monorepo -W
-
       - name: Lerna configure
         run: |
           yarn lerna bootstrap
