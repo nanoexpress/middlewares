@@ -5,7 +5,7 @@ import path from 'path';
 // eslint-disable-next-line consistent-return
 const importize = ({ path: _path, raw }, directory) => {
   if (path && !raw) {
-    const resolveFile = path.resolve(directory, _path);
+     const resolveFile = path.join(directory.substring(1), _path);
 
     const readBuffer = fs.readFileSync(resolveFile, 'utf-8');
 
