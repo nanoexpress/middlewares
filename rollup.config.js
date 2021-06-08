@@ -1,3 +1,4 @@
+/* eslint-disable node/no-unpublished-import, @typescript-eslint/naming-convention, eslint-comments/disable-enable-pair */
 import replace from '@rollup/plugin-replace';
 
 const external = [

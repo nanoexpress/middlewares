@@ -4,7 +4,11 @@ import swaggerUiDist from 'swagger-ui-dist';
 import { expose, load, render } from './methods/index.js';
 import importize from './utils/importize.js';
 
-const staticServe = import(`@nanoexpress/middleware-static-serve${process.env.NANO_ENV_MODULE === 'commonjs' ? '/cjs' : ''}`);
+const staticServe = import(
+  `@nanoexpress/middleware-static-serve${
+    process.env.NANO_ENV_MODULE === 'commonjs' ? '/cjs' : ''
+  }`
+);
 
 /**
  * Initialized Schemator instance
