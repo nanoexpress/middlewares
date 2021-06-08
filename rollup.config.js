@@ -1,3 +1,5 @@
+import replace from '@rollup/plugin-replace';
+
 const external = [
   'querystring',
   'graphql',
@@ -31,5 +33,13 @@ export default [
     sourcemap: 'inline',
     exports: 'default'
   },
+  plugins: [
+    replace({
+      preventAssignment: true,
+      values: {
+        'process.env.NANO_ENV_MODULE': JSON.stringify('commonjs')
+      }
+    })
+  ],
   external
 }));
