@@ -12,7 +12,8 @@
   "scripts": {
     "lint": "smartlint",
     "build": "rollup -c",
-    "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo"
+    "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo",
+    "prepare": "yarn build && husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
@@ -21,13 +22,17 @@
     "eslint-config-airlight-node": "^1.1.9",
     "husky": "^6.0.0",
     "lerna": "^4.0.0",
-    "lint-staged": "^11.0.0",
-    "lint-staged-config-airlight": "^1.0.8",
+    "lint-staged": "^11.0.1",
+    "lint-staged-config-airlight": "^2.0.0",
     "prettier-config-airlight": "^1.0.0",
-    "rollup": "^2.50.6",
-    "semantic-release": "^17.4.3",
+    "rollup": "^2.53.1",
+    "semantic-release": "^17.4.4",
     "semantic-release-monorepo": "^7.0.5",
-    "smartlint": "^1.1.11",
-    "typescript": "4.3.2"
+    "smartlint": "^2.0.1",
+    "typescript": "4.3.5"
+  },
+  "resolutions": {
+    "lodash": "^4.17.21",
+    "hosted-git-info": "^3.0.8"
   }
 }
