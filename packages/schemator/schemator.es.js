@@ -41,10 +41,12 @@ export default function schemator(config) {
   const functionExports = {};
 
   functionExports.define = (app) => {
-    app.get(
-      '/swagger-ui-dist/:file',
-      staticServe(swaggerUiDist.absolutePath())
-    );
+    staticServe
+      .then((module) => module.default(swaggerUiDist.absolutePath()))
+      .then((result) => app.get('/swagger-ui-dist/:file', result))
+      .catch((error) => {
+        throw new Error(error);
+      });
     app.get(`/${exposePath}`, expose(swaggerObject));
     app.get('/swagger', render({ exposePath: `/${exposePath}` }));
 

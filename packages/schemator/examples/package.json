@@ -2,6 +2,7 @@
   "type": "module",
   "main": "simple-doc.js",
   "dependencies": {
+    "@nanoexpress/middleware-body-parser": "^1.2.2",
     "nanoexpress": "^4.0.0"
   }
 }
