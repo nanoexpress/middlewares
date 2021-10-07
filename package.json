@@ -30,5 +30,11 @@
     "semantic-release-monorepo": "^7.0.5",
     "smartlint": "^4.0.0",
     "typescript": "4.4.3"
+  },
+  "resolutions": {
+    "lodash": "^4.17.21",
+    "tar": "^6.1.9",
+    "@npmcli/arborist": "^2.8.2",
+    "@npmcli/git": "^2.8.2"
   }
 }
