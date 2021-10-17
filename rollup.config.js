@@ -8,11 +8,13 @@ const external = [
   'path',
   'getdirname',
   'ajv',
+  'ajv-formats',
   'js-yaml',
   'fast-json-stringify',
   'swagger-ui-dist',
   'passport',
-  'passport/lib/http/request'
+  'passport/lib/http/request',
+  'lodash.omit'
 ];
 
 export default [
