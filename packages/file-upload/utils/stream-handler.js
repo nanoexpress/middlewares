@@ -3,7 +3,9 @@ import { Readable } from 'stream';
 export default function streamHandler(req, res) {
   const cache = [];
   const stream = new Readable({
-    read() {}
+    read() {
+      // some reads here
+    }
   });
   req.stream = stream;
 
