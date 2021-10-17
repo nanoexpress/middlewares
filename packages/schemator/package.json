@@ -40,6 +40,6 @@
     "getdirname": "^0.1.5",
     "js-yaml": "^4.1.0",
     "lodash.omit": "^4.5.0",
-    "swagger-ui-dist": "^3.52.3"
+    "swagger-ui-dist": "^3.52.5"
   }
 }
