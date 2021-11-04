@@ -31,6 +31,6 @@
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
-    "fast-query-parse": "^1.2.0"
+    "fast-query-parse": "^2.0.0"
   }
 }

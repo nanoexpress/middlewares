@@ -1,10 +1,10 @@
 import getdirname from 'getdirname';
 import path from 'path';
 import swaggerUiDist from 'swagger-ui-dist';
-import { expose, load, render } from './methods/index.js';
-import importize from './utils/importize.js';
+import { expose, load, render } from './methods';
+import importize from './utils/importize';
 
-const staticServe = import(
+const staticServe = await import(
   `@nanoexpress/middleware-static-serve${
     process.env.NANO_ENV_MODULE === 'commonjs' ? '/cjs' : ''
   }`

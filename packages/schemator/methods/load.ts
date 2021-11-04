@@ -2,13 +2,13 @@ import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import fastJsonStringify from 'fast-json-stringify';
 import getdirname from 'getdirname';
-import importize from '../utils/importize.js';
-import omitUnsupportedKeywords from '../utils/omit-unsupported-keywords.js';
+import importize from '../utils/importize';
+import omitUnsupportedKeywords from '../utils/omit-unsupported-keywords';
 import {
   flatObjects,
   schemaPrepare,
   validatorPrepare
-} from '../utils/schema-prepare.js';
+} from '../utils/schema-prepare';
 
 /**
  * @name load
