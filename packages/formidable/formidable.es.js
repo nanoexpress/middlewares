@@ -8,8 +8,8 @@ import Formidable from 'formidable';
  * @example
  * app.use(formidable())
  */
-export default function formidable(config = { multiples: true }, initialize) {
-  const form = Formidable(config);
+export default function formidable(config, initialize) {
+  const form = Formidable(config ?? { multiples: true });
   if (typeof initialize === 'function') {
     initialize(form);
   }
