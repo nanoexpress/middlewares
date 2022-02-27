@@ -16,25 +16,27 @@
     "prepare": "npm run build && husky install"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.1",
-    "@commitlint/config-lerna-scopes": "^13.2.0",
-    "@rollup/plugin-replace": "^3.0.0",
-    "eslint-config-airlight-node": "^2.0.0",
-    "husky": "^7.0.2",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-lerna-scopes": "^16.2.2",
+    "@rollup/plugin-replace": "^4.0.0",
+    "eslint-config-airlight-node": "^3.0.2",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0",
-    "lint-staged": "^11.2.3",
-    "lint-staged-config-airlight": "^2.0.1",
+    "lint-staged": "^12.3.4",
+    "lint-staged-config-airlight": "^3.0.1",
     "prettier-config-airlight": "^1.0.1",
-    "rollup": "^2.58.0",
-    "semantic-release": "^18.0.0",
+    "rollup": "^2.68.0",
+    "semantic-release": "^19.0.2",
     "semantic-release-monorepo": "^7.0.5",
-    "smartlint": "^5.0.0",
-    "typescript": "4.4.4"
+    "smartlint": "^5.0.1",
+    "typescript": "4.5.5"
   },
   "resolutions": {
     "lodash": "^4.17.21",
     "tar": "^6.1.9",
     "@npmcli/arborist": "^2.8.2",
-    "@npmcli/git": "^2.0.8"
+    "@npmcli/git": "^2.0.8",
+    "markdown-it": "^12.3.2",
+    "json-schema": "^0.4.0"
   }
 }
