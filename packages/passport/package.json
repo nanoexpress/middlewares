@@ -12,7 +12,7 @@
     "url": "https://www.patreon.com/dalisoft"
   },
   "engines": {
-    "node": ">=12.16.0"
+    "node": ">=18.12.1"
   },
   "repository": {
     "type": "git",
