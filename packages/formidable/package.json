@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
-    "@types/formidable": "^2.0.4",
-    "formidable": "^2.0.0-canary.20200504.1"
+    "@types/formidable": "^2.0.5",
+    "formidable": "^2.1.1"
   }
 }
