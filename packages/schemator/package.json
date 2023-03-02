@@ -34,12 +34,12 @@
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
     "@nanoexpress/middleware-static-serve": "^1.0.3",
-    "ajv": "^8.10.0",
+    "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
-    "fast-json-stringify": "^3.0.3",
+    "fast-json-stringify": "^5.6.2",
     "getdirname": "^0.1.5",
     "js-yaml": "^4.1.0",
     "lodash.omit": "^4.5.0",
-    "swagger-ui-dist": "^4.5.2"
+    "swagger-ui-dist": "^4.17.0"
   }
 }
