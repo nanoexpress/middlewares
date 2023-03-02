@@ -1,5 +1,5 @@
-/* eslint-disable node/no-unpublished-import, @typescript-eslint/naming-convention, eslint-comments/disable-enable-pair */
-import replace from '@rollup/plugin-replace';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const replace = require('@rollup/plugin-replace');
 
 const external = [
   'querystring',
@@ -17,7 +17,7 @@ const external = [
   'lodash.omit'
 ];
 
-export default [
+module.exports = [
   'body-parser',
   'file-upload',
   'formidable',
