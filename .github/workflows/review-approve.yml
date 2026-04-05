@@ -1,4 +1,4 @@
-name: Auto-merge dependabot updates
+name: Approve author & dependabot PR
 
 on: pull_request_target
 
@@ -7,14 +7,13 @@ jobs:
     timeout-minutes: 5
 
     runs-on: ubuntu-22.04
-    if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dalisoft' || github.actor == 'dependabot[bot]'
 
     steps:
       - uses: actions/checkout@v6
       - run: |
           gh pr review ${{ env.PR_NUMBER }} --comment -b "LGTM!"
           gh pr review ${{ env.PR_NUMBER }} --approve
-          gh pr merge ${{ env.PR_NUMBER }} --auto --squash
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
