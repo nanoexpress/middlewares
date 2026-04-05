@@ -14,22 +14,22 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [latest]
+        bun-version: [latest]
         os: [ubuntu-latest]
 
     steps:
       - uses: actions/checkout@v6
 
-      - name: Use Node.js
-        uses: actions/setup-node@v6
+      - name: Use Bun.js
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          bun-version: ${{ matrix.bun-version }}
 
       - name: Cache
         uses: actions/cache@v5
         with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          path: "~/.bun/install/cache"
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
 
       - name: Install
         run: yarn --frozen-lockfile
