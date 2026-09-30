@@ -3,7 +3,7 @@
 // eslint-disable-next-line n/no-missing-import
 import IncomingForm from '@types/formidable/Formidable';
 import { Options } from 'formidable';
-import { RequestListener } from 'http';
+import { RequestListener } from 'node:http';
 
 declare function formidable(
   options?: Options,

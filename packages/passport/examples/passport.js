@@ -37,7 +37,7 @@ const strategy = new LocalStrategy(
     usernameField: 'username',
     passwordField: 'password'
   },
-  (req, username, password, done) => {
+  (_req, username, password, done) => {
     // eslint-disable-next-line security-node/detect-possible-timing-attacks
     if (password !== '12345678') {
       return done(null, false);
@@ -59,11 +59,11 @@ passport.deserializeUser((user, done) => {
 // Our routes list
 app.get('/', async (req) => ({ user: req.user || 'Unauthorized' }));
 
-app.get('/done', (req, res) => {
+app.get('/done', (_req, res) => {
   res.end('Auth success');
 });
 
-app.get('/error', (req, res) => {
+app.get('/error', (_req, res) => {
   res.end('Auth failed');
 });
 

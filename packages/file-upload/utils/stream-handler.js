@@ -1,4 +1,4 @@
-import { Readable } from 'stream';
+import { Readable } from 'node:stream';
 
 export default function streamHandler(req, res) {
   const cache = [];
