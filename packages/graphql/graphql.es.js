@@ -13,7 +13,9 @@ import { compileQuery } from 'graphql-jit';
  */
 
 export default function graphql(schema, root) {
-  const cache = {};
+  // simple LRU so unique attacker-supplied queries cannot grow it unbounded
+  const COMPILED_QUERY_CACHE_LIMIT = 1000;
+  const cache = new Map();
   // eslint-disable-next-line @typescript-eslint/naming-convention
   const jitOptions = { customJSONSerializer: true };
   return async function graphqlHandler(req, res) {
@@ -47,17 +49,21 @@ export default function graphql(schema, root) {
           .send({ status: 'error', message: 'Invalid query' });
       }
 
-      compiled = cache[query];
+      compiled = cache.get(query);
 
       if (!compiled) {
         document = graphqlExports.parse(query);
-        cache[query] = compileQuery(
-          schema,
-          document,
-          operationName,
-          jitOptions
-        );
-        compiled = cache[query];
+
+        if (cache.size >= COMPILED_QUERY_CACHE_LIMIT) {
+          // evict the least recently used entry
+          cache.delete(cache.keys().next().value);
+        }
+        compiled = compileQuery(schema, document, operationName, jitOptions);
+        cache.set(query, compiled);
+      } else {
+        // refresh LRU position
+        cache.delete(query);
+        cache.set(query, compiled);
       }
 
       const context = { req, res };
