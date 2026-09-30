@@ -10,21 +10,21 @@
     "node": ">=18.12.1"
   },
   "scripts": {
-    "lint": "biome check . && rumdl check .",
+    "lint": "ls-lint && biome check . && oxlint . && rumdl check .",
     "build": "for pkg in body-parser file-upload formidable static graphql redoc schemator swagger-ui passport; do bun build \"packages/$pkg/$pkg.es.js\" --outdir \"packages/$pkg/cjs\" --entry-naming \"tmp.cjs.js\" --format cjs --target node --packages=external --sourcemap=inline --define 'process.env.NANO_ENV_MODULE=\"commonjs\"' && mv \"packages/$pkg/cjs/tmp.cjs.js\" \"packages/$pkg/cjs/$pkg.cjs.js\" || exit 1; done",
-    "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo",
     "prepare": "lefthook install",
-    "format": "biome check --write . && rumdl fmt ."
+    "format": "biome check --write . && rumdl fmt .",
+    "release-me": "for pkg in body-parser file-upload formidable static graphql redoc schemator swagger-ui passport; do (cd packages/$pkg && release-me --plugins=npm,npm-post,git,github-release) || exit 1; done"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-workspace-scopes": "^21.2.0",
+    "@ls-lint/ls-lint": "^2.3.1",
     "lefthook": "^2.1.15",
-    "lerna": "^9.0.7",
+    "oxlint": "^1.86.0",
+    "release-me-sh": "^0.11.12",
     "rumdl": "^0.2.78",
-    "semantic-release": "^25.0.3",
-    "semantic-release-monorepo": "^8.0.2",
     "typescript": "^7.0.2"
   },
   "packageManager": "bun@1.4.2"
