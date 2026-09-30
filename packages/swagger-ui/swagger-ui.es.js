@@ -27,9 +27,9 @@ export default function swaggerUiFrontend(config = {}) {
   // eslint-disable-next-line consistent-return
   return async function swaggerUiFrontendHandler(req, res) {
     if (config.url === undefined) {
-      config.url = `//${
-        req.headers !== undefined ? req.headers.host : req.getHeader('host')
-      }/docs/swagger.json`;
+      // never derive the spec URL from the request Host header (injection);
+      // the relative URL is resolved client-side against the page origin
+      config.url = '/docs/swagger.json';
     }
 
     if (req.path.indexOf('/swagger-ui') !== -1) {
@@ -38,6 +38,7 @@ export default function swaggerUiFrontend(config = {}) {
       );
     }
     if (req.path === config.path) {
+      res.setHeader('content-type', 'text/html');
       return res.end(`
       <!-- HTML for static distribution bundle build -->
 <!DOCTYPE html>
@@ -80,7 +81,7 @@ export default function swaggerUiFrontend(config = {}) {
     window.onload = function() {
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-        url: window.location.protocol + "${config.url}",
+        url: window.location.origin + "${config.url}",
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
