@@ -3,7 +3,10 @@
 
 name: Pull Request Linting and Building
 
-on: pull_request_target
+# runs on the PR head without repo secrets; the dependabot auto-merge
+# workflow (automerge.yml) keeps pull_request_target and never checks
+# out PR code
+on: pull_request
 
 env:
   CI: true
@@ -14,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        bun-version: [latest]
+        bun-version: [1.4.2]
         os: [ubuntu-latest]
 
     steps:
