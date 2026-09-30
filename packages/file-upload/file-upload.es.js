@@ -44,7 +44,7 @@ export default function fileUpload(config = { limit: '256mb' }) {
       streamHandler(req, res);
     }
 
-    const buffers = await streamParser(req);
+    const buffers = await streamParser(req, FILE_SIZE_LIMIT);
     const fields = uWS.getParts(buffers, contentType);
 
     req.files = [];
