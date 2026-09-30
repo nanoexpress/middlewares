@@ -1,5 +1,5 @@
 import { Options } from 'ajv';
-import { RequestListener } from 'http';
+import { RequestListener } from 'node:http';
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types, eslint-comments/disable-enable-pair */
 type LoadOptions = { attach: string; method: string };
 

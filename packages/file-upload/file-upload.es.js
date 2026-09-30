@@ -15,11 +15,9 @@ export default function fileUpload(config = { limit: '256mb' }) {
   const FILE_SIZE_LIMIT = sizeConvert(config.limit);
   return async function fileUploadHandler(req, res) {
     const contentType =
-      (req.headers && req.headers['content-type']) ||
-      req.getHeader('content-type');
+      req.headers?.['content-type'] || req.getHeader('content-type');
     const contentLength =
-      (req.headers && req.headers['content-length']) ||
-      req.getHeader('content-length');
+      req.headers?.['content-length'] || req.getHeader('content-length');
     if (
       !contentType ||
       !(req.method === 'POST' || req.method === 'PUT' || req.method === 'PATCH')
