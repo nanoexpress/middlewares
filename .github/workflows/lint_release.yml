@@ -18,7 +18,7 @@ jobs:
 
     strategy:
       matrix:
-        bun-version: [latest]
+        bun-version: [1.4.2]
         os: [ubuntu-latest]
 
     steps:
@@ -45,6 +45,8 @@ jobs:
         run: bun run build
 
       - name: Release
+        # releases only happen from protected-branch pushes, never PRs
+        if: github.event_name == 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
