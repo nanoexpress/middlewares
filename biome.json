@@ -1,7 +1,17 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
-  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
-  "assist": { "actions": { "source": { "organizeImports": "off" } } },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "off"
+      }
+    }
+  },
   "formatter": {
     "indentStyle": "space",
     "indentWidth": 2,
@@ -13,6 +23,14 @@
       "trailingCommas": "none",
       "arrowParentheses": "always",
       "bracketSameLine": true
+    }
+  },
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "noUnusedFunctionParameters": "warn"
+      }
     }
   }
 }
