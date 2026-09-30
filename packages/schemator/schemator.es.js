@@ -1,5 +1,5 @@
 import getdirname from 'getdirname';
-import path from 'path';
+import path from 'node:path';
 import swaggerUiDist from 'swagger-ui-dist';
 import { expose, load, render } from './methods/index.js';
 import importize from './utils/importize.js';

@@ -1,4 +1,4 @@
-import { RequestListener } from 'http';
+import { RequestListener } from 'node:http';
 
 interface IFileUploadOptions {
   limit: string;

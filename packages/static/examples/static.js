@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved, node/no-missing-import, eslint-comments/disable-enable-pair */
 import nanoexpress from '@nanoexpress/pro-slim'; // Or your choice, you can use PRO version itself
-import path from 'path';
+import path from 'node:path';
 import staticServe from '../static.es.js';
 
 const app = nanoexpress();

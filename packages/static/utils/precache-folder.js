@@ -1,6 +1,6 @@
 /* eslint-disable eslint-comments/disable-enable-pair, @typescript-eslint/no-use-before-define */
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import { getMime } from './mime.js';
 
 function handleDirectory(dirPath) {

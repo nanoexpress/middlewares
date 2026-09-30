@@ -7,7 +7,7 @@
  * schematorInstance.expose()
  */
 export default function expose(swaggerObject) {
-  return async (req, res) => {
+  return async (_req, res) => {
     res.setHeaders({
       // eslint-disable-next-line @typescript-eslint/naming-convention
       'Content-Type': 'application/json'

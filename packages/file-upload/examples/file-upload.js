@@ -1,9 +1,9 @@
 /* eslint-disable import/no-unresolved, node/no-missing-import, node/no-unpublished-import, eslint-comments/disable-enable-pair */
 /* eslint-disable import/no-extraneous-dependencies, node/no-extraneous-import */
 import fileUpload from '@nanoexpress/middleware-file-upload';
-import { writeFile } from 'fs/promises';
+import { writeFile } from 'node:fs/promises';
 import nanoexpress from 'nanoexpress';
-import path from 'path';
+import path from 'node:path';
 
 const app = nanoexpress({
   jsonSpaces: 2

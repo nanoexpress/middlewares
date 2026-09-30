@@ -1,6 +1,6 @@
-import fs from 'fs';
+import fs from 'node:fs';
 import jsYaml from 'js-yaml';
-import path from 'path';
+import path from 'node:path';
 
 // eslint-disable-next-line consistent-return
 const importize = ({ path: _path, raw }, directory) => {
