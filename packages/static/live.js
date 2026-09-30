@@ -1,4 +1,5 @@
 import { promises as fs } from 'node:fs';
+import { resolve, sep } from 'node:path';
 
 export const resAbortHandler = '___$HttpResponseAbortHandler';
 export default function staticMiddleware(path, config) {
@@ -17,8 +18,20 @@ export default function staticMiddleware(path, config) {
       url += config.index;
     }
 
-    // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
-    const filePath = path + url;
+    let decodedUrl;
+    try {
+      decodedUrl = decodeURIComponent(url);
+    } catch {
+      return;
+    }
+
+    // Path traversal check: the resolved file must stay under the root
+    const root = resolve(path);
+    const filePath = resolve(root, `.${decodedUrl}`);
+
+    if (filePath !== root && !filePath.startsWith(root + sep)) {
+      return;
+    }
 
     const stat = await fs.stat(filePath).catch(() => null);
 
