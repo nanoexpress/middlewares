@@ -10,7 +10,7 @@ jobs:
     if: github.actor == 'dalisoft' || github.actor == 'dependabot[bot]'
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - run: |
           gh pr review ${{ env.PR_NUMBER }} --comment -b "LGTM!"
           gh pr review ${{ env.PR_NUMBER }} --approve
