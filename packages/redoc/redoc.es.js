@@ -20,12 +20,12 @@ export default function redoc(config = {}) {
   // eslint-disable-next-line consistent-return
   return async function redocHandler(req, res) {
     if (config.url === undefined) {
-      config.url = `http://${
-        req.headers ? req.headers.origin : req.getHeader('host')
-      }/docs/swagger.json`;
+      // never derive the spec URL from request headers (Host/Origin injection)
+      config.url = '/docs/swagger.json';
     }
 
     if (req.path === config.path) {
+      res.setHeader('content-type', 'text/html');
       return res.end(`
     <!DOCTYPE html>
     <html>
@@ -60,7 +60,7 @@ export default function redoc(config = {}) {
           spec-url="${config.url}"
           expand-responses="all"
         ></redoc>
-        <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js" async></script>
+        <script src="https://cdn.jsdelivr.net/npm/redoc@2.5.4/bundles/redoc.standalone.js" integrity="sha384-w447zOpYfw/1Tv/5AK9NfHTlQIqE3RVR6KY62jCyy9zNDgO64cMwGGP1Fj0zJVf5" crossorigin="anonymous" async></script>
       </body>
     </html>
     `);
