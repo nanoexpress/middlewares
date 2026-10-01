@@ -1,6 +1,6 @@
 {
   "name": "@nanoexpress/middleware-file-upload",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "file-upload middleware for nanoexpress",
   "type": "module",
   "main": "file-upload.es.js",
