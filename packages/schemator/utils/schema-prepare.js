@@ -19,7 +19,7 @@ export function validatorPrepare(ajv, parameters, type, isRequired) {
     return isRequired
       ? async (req) => {
           if (!req[type]) {
-            throw new Error(`Reqest::${type} is required`);
+            throw new Error(`Request::${type} is required`);
           }
         }
       : null;

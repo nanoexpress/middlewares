@@ -50,7 +50,7 @@ app.use(staticServe('./static'));
 | `options.lastModified` | true         | No       | Enable browsers **Last-modified** check        |
 | `options.compressed`   | true         | No       | Compress response/response streams             |
 
-\* - Cached gives better performance, but on refresh gives cached result and uses more RAM. Live mode uses less memory usage, on request responses last version but on high-load applicatins may reduces performance
+\* - Cached gives better performance, but on refresh gives cached result and uses more RAM. Live mode uses less memory usage, on request responses last version but on high-load applications may reduces performance
 
 ## License
 

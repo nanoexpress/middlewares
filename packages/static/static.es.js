@@ -9,7 +9,7 @@ import live from './live.js';
  * Cached gives better performance, but on refresh gives cached result
  * and uses more RAM.
  * Live mode uses less memory usage, on request responses last version
- * but on high-load applicatins may reduces performance
+ * but on high-load applications may reduces performance
  *
  * @param {Boolean=} options.index Index filename
  * @param {Boolean=} options.forcePretty Force appending index-file
