@@ -1,0 +1,5 @@
+# typos spell-check config
+# https://github.com/crate-ci/typos
+
+[files]
+extend-exclude = ["packages/static/examples/static/testin.png"]
