@@ -1,8 +1,8 @@
 version: 2
 updates:
-  - package-ecosystem: npm
+  - package-ecosystem: bun
     open-pull-requests-limit: 10
-    directory: /action
+    directory: /
     commit-message:
       prefix: build
       prefix-development: chore
