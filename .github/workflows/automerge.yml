@@ -2,6 +2,9 @@ name: Auto-merge dependabot updates
 
 on: pull_request_target
 
+permissions:
+  contents: write
+
 jobs:
   auto-merge:
     timeout-minutes: 5
@@ -10,7 +13,6 @@ jobs:
     if: github.actor == 'dependabot[bot]'
 
     steps:
-      - uses: actions/checkout@v7
       - run: |
           gh pr review ${{ env.PR_NUMBER }} --comment -b "LGTM!"
           gh pr review ${{ env.PR_NUMBER }} --approve
