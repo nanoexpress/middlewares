@@ -25,7 +25,20 @@ jobs:
         os: [ubuntu-latest]
 
     steps:
+      # full history first: release-me versions from the commit log; this
+      # must run before Install because checkout's git clean removes
+      # node_modules
+      - name: Full checkout for release
+        # releases only happen from protected-branch pushes, never PRs
+        if: github.event_name == 'push'
+        uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          ref: master
+
       - uses: actions/checkout@v7.0.1
+        if: github.event_name != 'push'
 
       - name: Use Bun.js
         uses: oven-sh/setup-bun@v2.2.0
@@ -46,15 +59,6 @@ jobs:
 
       - name: Build
         run: bun run build
-
-      - name: Full checkout for release
-        # releases only happen from protected-branch pushes, never PRs
-        if: github.event_name == 'push'
-        uses: actions/checkout@v7.0.1
-        with:
-          fetch-depth: 0
-          fetch-tags: true
-          ref: master
 
       - name: Release
         if: github.event_name == 'push'
