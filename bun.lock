@@ -18,7 +18,7 @@
     },
     "packages/body-parser": {
       "name": "@nanoexpress/middleware-body-parser",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "dependencies": {
         "fast-query-parse": "^2.0.3",
       },
@@ -34,7 +34,7 @@
       "name": "@nanoexpress/middleware-formidable",
       "version": "1.0.0",
       "dependencies": {
-        "@types/formidable": "^2.0.5",
+        "@types/formidable": "^3.5.1",
         "formidable": "^3.5.4",
       },
     },
@@ -226,7 +226,7 @@
 
     "@simple-libs/stream-utils": ["@simple-libs/stream-utils@1.2.0", "", {}, "sha512-KxXvfapcixpz6rVEB6HPjOUZT22yN6v0vI0urQSk1L8MlEWPDFCZkhw2xmkyoTGYeFw7tWTZd7e3lVzRZRN/EA=="],
 
-    "@types/formidable": ["@types/formidable@2.0.6", "", { "dependencies": { "@types/node": "*" } }, "sha512-L4HcrA05IgQyNYJj6kItuIkXrInJvsXTPC5B1i64FggWKKqSL+4hgt7asiSNva75AoLQjq29oPxFfU4GAQ6Z2w=="],
+    "@types/formidable": ["@types/formidable@3.5.1", "", { "dependencies": { "@types/node": "*" } }, "sha512-aFQijSGbD8JCeEST2LEbwR7faHynbt43lojLIcTM/QhB2U06h41ZVRFVEql+Z1xdL+aKGIzm69V/P/uSW9N6XA=="],
 
     "@types/node": ["@types/node@25.5.2", "", { "dependencies": { "undici-types": "~7.18.0" } }, "sha512-tO4ZIRKNC+MDWV4qKVZe3Ql/woTnmHDr5JD8UI5hn2pwBrHEwOEMZK7WlNb5RKB6EoJ02gwmQS9OrjuFnZYdpg=="],
 

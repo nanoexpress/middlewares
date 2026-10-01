@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
-    "@types/formidable": "^2.0.5",
+    "@types/formidable": "^3.5.1",
     "formidable": "^3.5.4"
   }
 }
