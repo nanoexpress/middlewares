@@ -18,7 +18,7 @@
     },
     "packages/body-parser": {
       "name": "@nanoexpress/middleware-body-parser",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "dependencies": {
         "fast-query-parse": "^2.0.3",
       },
@@ -68,7 +68,7 @@
         "getdirname": "^0.1.5",
         "js-yaml": "^4.1.0",
         "lodash.omit": "^4.5.0",
-        "swagger-ui-dist": "^4.17.0",
+        "swagger-ui-dist": "^5.33.0",
       },
     },
     "packages/static": {
@@ -79,7 +79,7 @@
       "name": "@nanoexpress/middleware-swagger-ui",
       "version": "1.0.0",
       "dependencies": {
-        "swagger-ui-dist": "^4.17.0",
+        "swagger-ui-dist": "^5.33.0",
       },
     },
   },
@@ -221,6 +221,8 @@
     "@rumdl/cli-linux-x64-musl": ["@rumdl/cli-linux-x64-musl@0.2.78", "", { "os": "linux", "cpu": "x64" }, "sha512-E477aK9qrunFkE4XTNZLrfz5BU4KS+W13VnjTv5Qh8fdxlAVxlh6aWoYB7BzbzXQSEgNe/yi1u3r3EHcwgP+dw=="],
 
     "@rumdl/cli-win32-x64": ["@rumdl/cli-win32-x64@0.2.78", "", { "os": "win32", "cpu": "x64" }, "sha512-4DaBXu3tFVNc/2eflJADguC4Hf8ookxYh3ie7XsLFxYEJrfXeGqD1j1ZIVXg+dZDG22+R1VEwFT6JsCOG3ntWA=="],
+
+    "@scarf/scarf": ["@scarf/scarf@1.4.0", "", {}, "sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ=="],
 
     "@simple-libs/child-process-utils": ["@simple-libs/child-process-utils@1.0.2", "", { "dependencies": { "@simple-libs/stream-utils": "^1.2.0" } }, "sha512-/4R8QKnd/8agJynkNdJmNw2MBxuFTRcNFnE5Sg/G+jkSsV8/UBgULMzhizWWW42p8L5H7flImV2ATi79Ove2Tw=="],
 
@@ -448,7 +450,7 @@
 
     "strip-ansi": ["strip-ansi@6.0.1", "", { "dependencies": { "ansi-regex": "^5.0.1" } }, "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A=="],
 
-    "swagger-ui-dist": ["swagger-ui-dist@4.19.1", "", {}, "sha512-n/gFn+R7G/BXWwl5UZLw6F1YgWOlf3zkwGlsPhTMhNtAAolBGKg0JS5b2RKt5NI6/hSopVaSrki2wTIMUDDy2w=="],
+    "swagger-ui-dist": ["swagger-ui-dist@5.33.0", "", { "dependencies": { "@scarf/scarf": "=1.4.0" } }, "sha512-wpdK+m6BU5yj6pmUdMskZVTSWYG4DLglAx3sIhylloY37i8O37IrH+YEpqdXNfpaTGxILRBFzUqLF2jKqbfI7A=="],
 
     "tinyexec": ["tinyexec@1.0.4", "", {}, "sha512-u9r3uZC0bdpGOXtlxUIdwf9pkmvhqJdrVCH9fapQtgy/OeTTMZ1nqH7agtvEfmGui6e1XxjcdrlxvxJvc3sMqw=="],
 
