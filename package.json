@@ -14,7 +14,7 @@
     "build": "for pkg in body-parser file-upload formidable static graphql redoc schemator swagger-ui passport; do bun build \"packages/$pkg/$pkg.es.js\" --outdir \"packages/$pkg/cjs\" --entry-naming \"tmp.cjs.js\" --format cjs --target node --packages=external --sourcemap=inline --define 'process.env.NANO_ENV_MODULE=\"commonjs\"' && mv \"packages/$pkg/cjs/tmp.cjs.js\" \"packages/$pkg/cjs/$pkg.cjs.js\" || exit 1; done",
     "prepare": "lefthook install",
     "format": "biome check --write . && rumdl fmt .",
-    "release-me": "export PATH=\"$PWD/node_modules/.bin:$PATH\"; for pkg in body-parser file-upload formidable static graphql redoc schemator swagger-ui passport; do (cd packages/$pkg && release-me --plugins=npm,npm-post,git,github-release) || exit 1; done"
+    "release-me": "export PATH=\"$PWD/node_modules/.bin:$PATH\"; for pkg in body-parser file-upload formidable static graphql redoc schemator swagger-ui passport; do (cd packages/$pkg && release-me -w --plugins=npm,npm-post,git,github-release) || exit 1; done"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",
