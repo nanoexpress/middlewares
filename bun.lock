@@ -18,9 +18,9 @@
     },
     "packages/body-parser": {
       "name": "@nanoexpress/middleware-body-parser",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "dependencies": {
-        "fast-query-parse": "^2.0.3",
+        "fast-query-parse": "^3.1.0",
       },
     },
     "packages/file-upload": {
@@ -320,7 +320,7 @@
 
     "fast-json-stringify": ["fast-json-stringify@5.16.1", "", { "dependencies": { "@fastify/merge-json-schemas": "^0.1.0", "ajv": "^8.10.0", "ajv-formats": "^3.0.1", "fast-deep-equal": "^3.1.3", "fast-uri": "^2.1.0", "json-schema-ref-resolver": "^1.0.1", "rfdc": "^1.2.0" } }, "sha512-KAdnLvy1yu/XrRtP+LJnxbBGrhN+xXu+gt3EUvZhYGKCr3lFHq/7UFJHHFgmJKoqlh6B40bZLEv7w46B0mqn1g=="],
 
-    "fast-query-parse": ["fast-query-parse@2.0.4", "", { "dependencies": { "fast-decode-uri-component": "^1.0.1" } }, "sha512-fTBe7ETP/wLLhUTx44k247fxo8zu7Z/lOUXx7yXNDIlyiPINy6OI1Lrzf1++KIp3zxaOaWsyW+5acP/+O/iqkQ=="],
+    "fast-query-parse": ["fast-query-parse@3.1.0", "", { "dependencies": { "fast-decode-uri-component": "^1.0.1" } }, "sha512-ThdC8A4Wi8naYwS1vUERRC3aNhAP5s9U0suMS7afVfQAYFjV/xVToQdzn0bCk4uQgn0no42X46sBI7DAnnCswQ=="],
 
     "fast-uri": ["fast-uri@3.1.8", "", {}, "sha512-GZMtZUTNRpOVIECoXwLNZS5xUGE+mVNbTB8h/7Rwh2TFWcBQiPzTgyZi05BF9UMZKkLJv8XBRJTlU7zg8+ZfMg=="],
 
