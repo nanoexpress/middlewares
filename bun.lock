@@ -11,7 +11,7 @@
         "@ls-lint/ls-lint": "^2.3.1",
         "lefthook": "^2.1.15",
         "oxlint": "^1.86.0",
-        "release-me-sh": "^0.11.12",
+        "release-me-sh": "^0.12.0",
         "rumdl": "^0.2.78",
         "typescript": "^7.0.2",
       },
@@ -430,7 +430,7 @@
 
     "picocolors": ["picocolors@1.1.1", "", {}, "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="],
 
-    "release-me-sh": ["release-me-sh@0.11.12", "", { "bin": { "release-me": "release.sh", "release-me-sh": "release.sh" } }, "sha512-rLfJKZs/qei3GAb3aAZMH77gMfDJxqR9HxqjxCqBkx3F2eC+7CHPYvErJGlIka8Z4unyEkAJ3BKkqd2OHYL2lA=="],
+    "release-me-sh": ["release-me-sh@0.12.0", "", { "bin": { "release-me": "release.sh", "release-me-sh": "release.sh" } }, "sha512-SAIYYmLJCcFlLZUHYjUxdH00t+yTBTiw2Z39PCVyspgn9neG//2/cdNFsa0BUFRLZCS6bVlfF/akWVrzPUiYVg=="],
 
     "require-directory": ["require-directory@2.1.1", "", {}, "sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q=="],
 
