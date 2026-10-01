@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "engines": {
-    "node": ">=18.12.1"
+    "node": ">=22"
   },
   "scripts": {
     "lint": "ls-lint && biome check . && oxlint . && rumdl check .",
