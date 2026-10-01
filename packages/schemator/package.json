@@ -34,7 +34,7 @@
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
     "@nanoexpress/middleware-static-serve": "^1.0.3",
-    "ajv": "^8.12.0",
+    "ajv": "^8.20.0",
     "ajv-formats": "^2.1.1",
     "fast-json-stringify": "^5.6.2",
     "getdirname": "^0.1.5",
