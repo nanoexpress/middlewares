@@ -21,7 +21,7 @@ jobs:
 
     strategy:
       matrix:
-        bun-version: [1.4.2]
+        bun-version: [1.4.4]
         os: [ubuntu-latest]
 
     steps:

@@ -1,4 +1,4 @@
-import graphqlExports from 'graphql';
+import { parse as parseGraphQL } from 'graphql';
 import { compileQuery } from 'graphql-jit';
 
 /**
@@ -52,7 +52,7 @@ export default function graphql(schema, root) {
       compiled = cache.get(query);
 
       if (!compiled) {
-        document = graphqlExports.parse(query);
+        document = parseGraphQL(query);
 
         if (cache.size >= COMPILED_QUERY_CACHE_LIMIT) {
           // evict the least recently used entry

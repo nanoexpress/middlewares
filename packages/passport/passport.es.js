@@ -7,12 +7,13 @@
  * app.use(passport.session())
  */
 import passport from 'passport';
-import passportHttpRequest from 'passport/lib/http/request.js';
 
 export default function passportInitialize(config) {
   const initialize = passport.initialize(config);
   return async (req, res) => {
-    Object.assign(req, passportHttpRequest);
+    // `passport.initialize()` installs the supported request helpers
+    // (`login`, `logout`, `isAuthenticated`, ...) itself, so the wrapper no
+    // longer reaches into passport's internal `lib/http/request.js` module.
     await new Promise((resolve, reject) =>
       initialize(req, res, (err, done) => {
         if (err) {
