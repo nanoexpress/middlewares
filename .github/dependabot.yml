@@ -3,6 +3,7 @@ updates:
   - package-ecosystem: npm
     open-pull-requests-limit: 10
     directory: /action
+    versioning-strategy: increase
     commit-message:
       prefix: build
       prefix-development: chore
