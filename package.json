@@ -10,19 +10,18 @@
     "node": ">=22"
   },
   "scripts": {
-    "lint": "ls-lint && biome check . && oxlint . && rumdl check .",
+    "lint": "ls-lint && biome check . && rumdl check .",
     "build": "for pkg in body-parser file-upload formidable static graphql redoc schemator swagger-ui passport; do bun build \"packages/$pkg/$pkg.es.js\" --outdir \"packages/$pkg/cjs\" --entry-naming \"tmp.cjs.js\" --format cjs --target node --packages=external --sourcemap=inline --define 'process.env.NANO_ENV_MODULE=\"commonjs\"' && mv \"packages/$pkg/cjs/tmp.cjs.js\" \"packages/$pkg/cjs/$pkg.cjs.js\" || exit 1; done",
     "prepare": "lefthook install",
     "format": "biome check --write . && rumdl fmt .",
     "release-me": "export PATH=\"$PWD/node_modules/.bin:$PATH\"; for pkg in body-parser file-upload formidable static graphql redoc schemator swagger-ui passport; do (cd packages/$pkg && release-me -w --plugins=npm,npm-post,git,github-release) || exit 1; done"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.15",
+    "@biomejs/biome": "^2.6.6",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-workspace-scopes": "^21.2.0",
     "@ls-lint/ls-lint": "^2.3.1",
     "lefthook": "^2.1.15",
-    "oxlint": "^1.86.0",
     "release-me-sh": "^0.12.0",
     "rumdl": "^0.2.78",
     "typescript": "^7.0.2"
