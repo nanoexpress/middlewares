@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import jsYaml from 'js-yaml';
+import { load as loadYaml } from 'js-yaml';
 import path from 'node:path';
 
 // eslint-disable-next-line consistent-return
@@ -10,7 +10,7 @@ const importize = ({ path: _path, raw }, directory) => {
     const readBuffer = fs.readFileSync(resolveFile, 'utf-8');
 
     if (_path.endsWith('.yaml') || _path.endsWith('.yml')) {
-      return jsYaml.load(readBuffer);
+      return loadYaml(readBuffer);
     }
     if (_path.endsWith('.json')) {
       return JSON.parse(readBuffer);

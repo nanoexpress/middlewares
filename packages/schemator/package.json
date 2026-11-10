@@ -33,13 +33,13 @@
   },
   "homepage": "https://github.com/nanoexpress/middlewares#readme",
   "dependencies": {
-    "@nanoexpress/middleware-static-serve": "^1.0.3",
-    "ajv": "^8.12.0",
-    "ajv-formats": "^2.1.1",
-    "fast-json-stringify": "^5.6.2",
-    "getdirname": "^0.1.5",
-    "js-yaml": "^4.1.0",
-    "lodash.omit": "^4.5.0",
-    "swagger-ui-dist": "^4.17.0"
+    "@nanoexpress/middleware-static-serve": "^2.0.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "fast-json-stringify": "^7.3.5",
+    "getdirname": "^0.1.6",
+    "js-yaml": "^5.5.0",
+    "lodash.omit": "^4.18.0",
+    "swagger-ui-dist": "^5.34.1"
   }
 }
